@@ -10,11 +10,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Joey — Community Architect & Writer">
 <meta property="og:description" content="I launch and run online communities and build the systems — onboarding, governance, teams, events, outreach — that keep them alive.">
-<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/assets/og-image.png">
+<meta property="og:image" content="https://joeyinsync.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Joey — Community Architect & Writer">
 <meta name="twitter:description" content="I launch and run online communities and build the systems that keep them alive.">
-<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN/assets/og-image.png">
+<meta name="twitter:image" content="https://joeyinsync.com/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -240,7 +240,10 @@ section{position:relative;z-index:3;background:var(--void);padding:var(--s7) 0}
 .ref{border-left:2px solid var(--accent);padding-left:var(--s3)}
 .ref .q{font-family:"Bricolage Grotesque";font-weight:500;font-size:clamp(19px,2.3vw,25px);line-height:1.32;letter-spacing:-.01em;color:var(--ink)}
 .ref .q .mk{color:var(--accent)}
-.ref .by{margin-top:var(--s3);font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted)}
+.ref .by{margin-top:var(--s3);display:flex;align-items:center;gap:12px;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted)}
+.ref .by .ava{width:42px;height:42px;border-radius:50%;overflow:hidden;flex:none;border:1px solid var(--line-2);background:var(--panel-2);display:flex;align-items:center;justify-content:center}
+.ref .by .ava img{width:100%;height:100%;object-fit:cover}
+.ref .by .ava.mono{font-size:11px;color:var(--accent-2);letter-spacing:.03em;font-weight:500}
 .ref .by b{color:var(--ink);font-weight:500;display:block;margin-bottom:2px}
 
 /* timeline */
@@ -524,11 +527,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div class="refs">
       <blockquote class="ref" data-reveal>
         <p class="q"><span class="mk">&ldquo;</span>Joey built the backbone of both my communities. On Aurora he took an empty server to thousands of messages a day and designed the onboarding, rules and events that kept it running. On Crimson he built and trained a staff team that ran itself after he moved on. He's who I'd trust with community structure.<span class="mk">&rdquo;</span></p>
-        <div class="by"><b>Mikey</b>Owner &amp; Founder · Crimson Network / Project Aurora</div>
+        <div class="by"><span class="ava"><img src="assets/mikey.webp" alt="Mikey avatar"></span><span><b>Mikey</b>Owner &amp; Founder · Crimson Network / Project Aurora</span></div>
       </blockquote>
       <blockquote class="ref" data-reveal>
         <p class="q"><span class="mk">&ldquo;</span>Clearly documented, showing exactly what needed to be adjusted or added, and which parts were your own design. Your critical analysis of our structure is a skill highly valued; I would most certainly recommend you for a position where you can express it to the fullest.<span class="mk">&rdquo;</span></p>
-        <div class="by"><b>XMG Major</b>HDS Division · The Art of Warfare</div>
+        <div class="by"><span class="ava mono">XMG</span><span><b>XMG Major</b>HDS Division · The Art of Warfare</span></div>
       </blockquote>
     </div>
   </div>
