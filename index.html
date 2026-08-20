@@ -103,9 +103,9 @@ body{caret-color:var(--accent)}
 .hero .wrap{position:relative;z-index:3;width:100%;padding-bottom:var(--s6);padding-top:120px}
 .hero-tag{display:flex;gap:18px;align-items:center;margin-bottom:26px;flex-wrap:wrap}
 .hero-tag .op{display:flex;align-items:center;gap:12px}
-.hero-tag .op img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2)}
-.hero-tag .op .m1{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--aurora)}
-.hero-tag .op .m2{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--dim);margin-top:2px}
+.hero-tag .op img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2)}
+.hero-tag .op .m1{font-family:"JetBrains Mono",monospace;font-size:14px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--aurora)}
+.hero-tag .op .m2{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);margin-top:4px}
 h1.name{font-size:clamp(78px,17vw,240px);font-weight:800;letter-spacing:-.04em;line-height:.82;
   color:var(--ink);text-shadow:0 0 90px rgba(63,224,197,.18)}
 h1.name .ch{display:inline-block}
@@ -171,7 +171,7 @@ section{position:relative;z-index:3;background:var(--void);padding:var(--s7) 0}
 .chapter-mark img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4;transform:scale(1.12);will-change:transform}
 .chapter-mark::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,9,14,.45),rgba(7,9,14,.2) 45%,var(--void) 98%)}
 .chapter-mark .cm-in{position:relative;z-index:3;padding:0 var(--s3) var(--s5);width:100%;max-width:var(--maxw);margin:0 auto}
-.chapter-mark .file{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.chapter-mark .file{font-family:"JetBrains Mono",monospace;font-size:14px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .chapter-mark h2{font-size:clamp(48px,11vw,150px);font-weight:800;letter-spacing:-.04em;line-height:.86}
 .chapter-mark .sub{margin-top:14px;color:var(--muted);max-width:52ch;font-size:16px}
 
@@ -186,6 +186,10 @@ section{position:relative;z-index:3;background:var(--void);padding:var(--s7) 0}
 .role-line span{border:1px solid var(--line);padding:6px 11px;border-radius:var(--r-sm)}
 .role-line span b{color:var(--accent-2);font-weight:500}
 .role-line .arw{border:0;padding:0;color:var(--dim)}
+.watch{display:inline-flex;align-items:center;gap:11px;margin-top:var(--s3);font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.03em;color:var(--accent);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:11px 16px;transition:border-color .3s,background .3s}
+.watch:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.watch .pl{width:26px;height:26px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.watch .pl svg{width:10px;height:10px;fill:var(--accent);margin-left:1px}
 
 /* DATA MOMENT */
 .datamoment{margin:var(--s5) 0;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-md);background:linear-gradient(180deg,var(--panel),var(--void-2));position:relative;overflow:hidden}
@@ -277,6 +281,7 @@ section{position:relative;z-index:3;background:var(--void);padding:var(--s7) 0}
 .contact .ct-big{font-family:"Bricolage Grotesque";font-weight:800;letter-spacing:-.04em;line-height:.92;font-size:clamp(46px,11vw,150px)}
 .contact .ct-big a{transition:color .3s}
 .contact .ct-big a:hover{color:var(--accent)}
+.contact .ct-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:var(--s4)}
 .contact .ct-row{display:flex;flex-wrap:wrap;gap:var(--s4);margin-top:var(--s4);font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted)}
 .contact .ct-row div b{color:var(--dim);font-weight:400;display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
 .contact .ct-row a:hover{color:var(--accent)}
@@ -423,6 +428,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <span>Canon Director</span><span class="arw">&rarr;</span>
             <span>Executive Director</span>
           </div>
+          <a class="watch" href="https://youtu.be/3K1XDHG_QLo" target="_blank" rel="noopener"><span class="pl"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>Watch the Project Aurora launch trailer</a>
         </div>
         <div class="blk" data-reveal>
           <div class="k">The problem</div>
@@ -457,11 +463,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <div class="ms-k" data-reveal>// Visual identity &amp; world — produced by me · click to enlarge</div>
         <div class="gal">
           <figure class="big" data-lb data-reveal><img src="assets/aurora-mark.webp" alt="Project Aurora brand mark" loading="lazy"><figcaption>Brand mark — Project Aurora</figcaption></figure>
-          <figure class="tall" data-lb data-reveal><img src="assets/aurora-portal.webp" alt="Aurora world art — Beta gate complex" loading="lazy"><figcaption>World art — Gate Complex</figcaption></figure>
+          <figure class="tall" data-lb data-reveal><img src="assets/portal-alpha.webp" alt="Aurora world art — Omega-3 gate complex, Portal Alpha" loading="lazy"><figcaption>World art — Omega-3, Portal Alpha</figcaption></figure>
           <figure class="w2" data-lb data-reveal><img src="assets/aurora-batteries.webp" alt="Aurora world art — wall batteries" loading="lazy"><figcaption>World art — Wall Batteries</figcaption></figure>
           <figure class="w2" data-lb data-reveal><img src="assets/aurora-walls.webp" alt="Aurora world art — outer walls" loading="lazy"><figcaption>World art — Outer Walls</figcaption></figure>
           <figure class="w3" data-lb data-reveal><img src="assets/aurora-mess.webp" alt="Aurora world art — Site-24 mess hall" loading="lazy"><figcaption>World art — Site-24, a living community</figcaption></figure>
-          <figure class="w3" data-lb data-reveal><img src="assets/aurora-static.webp" alt="Aurora world art — anomalous radio" loading="lazy"><figcaption>World art — Static</figcaption></figure>
+          <figure class="w3" data-lb data-reveal><img src="assets/aurora-portal.webp" alt="Aurora world art — Beta gate complex" loading="lazy"><figcaption>World art — Gate Complex Beta</figcaption></figure>
         </div>
       </div>
     </div>
@@ -490,6 +496,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <span>Staff Manager</span><span class="arw">&rarr;</span>
             <span>Handed off <b>· runs itself</b></span>
           </div>
+          <a class="watch" href="https://youtu.be/6JKjEpkQwbU" target="_blank" rel="noopener"><span class="pl"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>Watch a Crimson Network operation</a>
         </div>
         <div class="blk" data-reveal>
           <div class="k">The thesis</div>
@@ -513,8 +520,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="media-strip">
         <div class="ms-k" data-reveal>// Network branding · click to enlarge</div>
         <div class="gal">
-          <figure class="big" data-lb data-reveal><img src="assets/crimson-title.webp" alt="Crimson Shield International title banner" loading="lazy"><figcaption>Crimson Shield International — title identity</figcaption></figure>
-          <figure class="tall" data-lb data-reveal><img src="assets/crimson-mark.webp" alt="Crimson Shield brand banner" loading="lazy"><figcaption>Brand banner</figcaption></figure>
+          <figure class="big" data-lb data-reveal><img src="assets/crimson-network.webp" alt="Crimson Network title card" loading="lazy"><figcaption>Title identity — Crimson Network</figcaption></figure>
+          <figure class="tall" data-lb data-reveal><img src="assets/iron-duel.webp" alt="Iron Duel — a Crimson PvP event poster" loading="lazy"><figcaption>Event design — Iron Duel operation</figcaption></figure>
+          <figure class="w2" data-lb data-reveal><img src="assets/grey-ghost.webp" alt="Grey Ghost Training Unit patch" loading="lazy"><figcaption>Unit identity — Grey Ghost</figcaption></figure>
+          <figure class="w2" data-lb data-reveal><img src="assets/csf-patch.webp" alt="Crimson Special Forces patch" loading="lazy"><figcaption>Unit identity — Crimson Special Forces</figcaption></figure>
+          <figure class="w3" data-lb data-reveal><img src="assets/crimson-gameplay.webp" alt="Crimson Network in-game operation" loading="lazy"><figcaption>In-game — a live operation</figcaption></figure>
+          <figure class="w3" data-lb data-reveal><img src="assets/crimson-title.webp" alt="Crimson Shield International title banner" loading="lazy"><figcaption>Crimson Shield International — brand</figcaption></figure>
         </div>
       </div>
     </div>
@@ -576,9 +587,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="wrap">
     <div class="ct-k" data-reveal>05 / Open a line</div>
     <div class="ct-big" data-reveal><a href="mailto:joeyinsync@gmail.com">Let's build<br>something alive.</a></div>
-    <div class="ct-row" data-reveal>
+    <div class="ct-actions">
+      <a class="btn primary" href="mailto:joeyinsync@gmail.com">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener">Hire me on Upwork</a>
+    </div>
+    <div class="ct-row">
       <div><b>Email</b><a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a></div>
       <div><b>Discord</b><span>maniactill</span></div>
+      <div><b>Upwork</b><a href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener">Upwork profile</a></div>
       <div><b>Status</b><span>Open for work</span></div>
     </div>
   </div>
@@ -587,7 +603,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <footer>
   <div class="wrap">
     <span>AESRC-24 · Personnel file · Built &amp; written by Joey</span>
-    <span>SECURE · CONTAIN · SUSTAIN</span>
+    <span>ANALYZE · BUILD · SUSTAIN</span>
   </div>
 </footer>
 
@@ -604,47 +620,51 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(RM) document.body.classList.add('no-motion');
 
-/* ---------- AURORA CANVAS ---------- */
+/* ---------- AURORA CANVAS (slow, gentle) ---------- */
 (function(){
   const cv = document.getElementById('aurora-canvas');
   if(!cv) return;
   const ctx = cv.getContext('2d');
-  let W,H,DPR, stars=[], t=0, mx=.5, my=.5, running=true, visible=true, rafId=null;
+  let W,H,DPR, stars=[], t=0, tmx=.5, tmy=.5, mx=.5, my=.5, running=true, visible=true, rafId=null;
   function size(){
-    DPR = Math.min(window.devicePixelRatio||1, 2);
+    DPR = Math.min(window.devicePixelRatio||1, 1.75);
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W*DPR; cv.height = H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
-    stars = Array.from({length: Math.round(W*H/9000)}, ()=>({
-      x:Math.random()*W, y:Math.random()*H*0.7, r:Math.random()*1.3+.2, tw:Math.random()*Math.PI*2, sp:Math.random()*.02+.004
+    stars = Array.from({length: Math.round(W*H/16000)}, ()=>({
+      x:Math.random()*W, y:Math.random()*H*0.72, r:Math.random()*1.2+.2,
+      tw:Math.random()*Math.PI*2, sp:Math.random()*.003+.0008, base:Math.random()*.25+.12
     }));
   }
+  // gentle slow drift; sp values are tiny so a full wave takes ~30–50s
   const bands = [
-    {col:[63,224,197],  amp:60, yl:.30, sp:.00042, w:150, o:.16, ph:0},
-    {col:[121,236,216], amp:44, yl:.24, sp:.00060, w:110, o:.12, ph:2},
-    {col:[40,150,180],  amp:80, yl:.40, sp:.00030, w:200, o:.10, ph:4}
+    {col:[63,224,197],  amp:56, yl:.31, sp:.0044, w:150, o:.14, ph:0},
+    {col:[121,236,216], amp:40, yl:.25, sp:.0060, w:110, o:.10, ph:2},
+    {col:[40,150,180],  amp:78, yl:.41, sp:.0032, w:200, o:.09, ph:4}
   ];
   function draw(){
     ctx.clearRect(0,0,W,H);
-    for(const s of stars){ s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*.7+.1;
+    // smooth, lazy parallax
+    mx += (tmx-mx)*.04; my += (tmy-my)*.04;
+    for(const s of stars){ s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*s.base+.05;
       ctx.globalAlpha=a; ctx.fillStyle='#cfe9ff'; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,7); ctx.fill(); }
     ctx.globalAlpha=1;
     ctx.globalCompositeOperation='lighter';
-    const px = (mx-.5)*40;
+    const px = (mx-.5)*36;
     for(const b of bands){
-      const baseY = H*b.yl + (my-.5)*30;
+      const baseY = H*b.yl + (my-.5)*26;
       const grad = ctx.createLinearGradient(0,baseY-b.w,0,baseY+b.w*1.4);
       grad.addColorStop(0,`rgba(${b.col[0]},${b.col[1]},${b.col[2]},0)`);
       grad.addColorStop(.5,`rgba(${b.col[0]},${b.col[1]},${b.col[2]},${b.o})`);
       grad.addColorStop(1,`rgba(${b.col[0]},${b.col[1]},${b.col[2]},0)`);
       ctx.fillStyle=grad; ctx.beginPath(); ctx.moveTo(-50,H);
-      for(let x=-50;x<=W+50;x+=14){
-        const y = baseY + Math.sin(x*.0045 + t*b.sp*1000 + b.ph)*b.amp
-          + Math.sin(x*.0016 + t*b.sp*640 + b.ph)*b.amp*.6 + px;
+      for(let x=-50;x<=W+50;x+=16){
+        const y = baseY + Math.sin(x*.0045 + t*b.sp + b.ph)*b.amp
+          + Math.sin(x*.0016 + t*b.sp*.66 + b.ph)*b.amp*.55 + px;
         ctx.lineTo(x,y);
       }
-      for(let x=W+50;x>=-50;x-=14){
-        const y = baseY + b.w + Math.sin(x*.0045 + t*b.sp*1000 + b.ph)*b.amp
-          + Math.sin(x*.0016 + t*b.sp*640 + b.ph)*b.amp*.6 + px;
+      for(let x=W+50;x>=-50;x-=16){
+        const y = baseY + b.w + Math.sin(x*.0045 + t*b.sp + b.ph)*b.amp
+          + Math.sin(x*.0016 + t*b.sp*.66 + b.ph)*b.amp*.55 + px;
         ctx.lineTo(x,y);
       }
       ctx.closePath(); ctx.fill();
@@ -655,7 +675,7 @@ if(RM) document.body.classList.add('no-motion');
   size(); window.addEventListener('resize', size);
   if(RM){ draw(); }
   else { loop(); }
-  window.addEventListener('mousemove', e=>{ mx=e.clientX/window.innerWidth; my=e.clientY/window.innerHeight; }, {passive:true});
+  window.addEventListener('mousemove', e=>{ tmx=e.clientX/window.innerWidth; tmy=e.clientY/window.innerHeight; }, {passive:true});
   const hero=document.querySelector('.hero');
   new IntersectionObserver(es=>{ visible=es[0].isIntersecting; if(visible&&!RM&&!rafId) loop(); },{threshold:0}).observe(hero);
 })();
@@ -724,6 +744,19 @@ function start(){
   });
 
   ScrollTrigger.refresh();
+  // robustness: re-measure after fonts/images load, and force-reveal anything already in view
+  window.addEventListener('load', ()=>ScrollTrigger.refresh());
+  const sweep=()=>{
+    const vh=window.innerHeight;
+    document.querySelectorAll('[data-reveal]').forEach(el=>{
+      if(getComputedStyle(el).opacity==='0' && el.getBoundingClientRect().top < vh*1.05) gsap.set(el,{opacity:1,y:0});
+    });
+    document.querySelectorAll('[data-reveal-line] > *').forEach(el=>{
+      if(el.getBoundingClientRect().top < vh*1.05 && Math.abs(gsap.getProperty(el,'yPercent'))>1) gsap.set(el,{yPercent:0});
+    });
+  };
+  setTimeout(sweep,1600);
+  window.addEventListener('scroll',()=>{clearTimeout(window.__sw);window.__sw=setTimeout(sweep,350);},{passive:true});
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
