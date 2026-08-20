@@ -623,6 +623,140 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   .case-gateway-cta{align-items:flex-start;flex-direction:column}
 }
 
+
+
+/* ============ JARVIS / HOLOGRAPHIC SYSTEM MAP ============ */
+.system-map{perspective:1400px;--map-rx:0deg;--map-ry:0deg}
+.system-map::after{content:"";position:absolute;inset:42px 12% 96px;border:1px solid color-mix(in srgb,var(--accent) 12%,transparent);border-radius:50%;transform:rotateX(72deg);transform-origin:center;opacity:.34;pointer-events:none;box-shadow:0 0 70px color-mix(in srgb,var(--accent) 5%,transparent)}
+.map-grid{transform-style:preserve-3d;transform:rotateX(var(--map-rx)) rotateY(var(--map-ry)) translateZ(0);transform-origin:50% 52%;transition:transform .28s var(--ease);will-change:transform;isolation:isolate}
+.map-grid::before{content:"";position:absolute;inset:7% 19%;border:1px solid color-mix(in srgb,var(--accent) 13%,transparent);border-radius:50%;transform:rotateX(71deg) translateZ(-28px);box-shadow:0 0 55px color-mix(in srgb,var(--accent) 7%,transparent),inset 0 0 45px color-mix(in srgb,var(--accent) 4%,transparent);pointer-events:none;z-index:0}
+.map-links{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0;filter:drop-shadow(0 0 4px color-mix(in srgb,var(--accent) 28%,transparent))}
+.map-links line{stroke:color-mix(in srgb,var(--accent) 32%,var(--line));stroke-width:1;stroke-dasharray:4 9;animation:mapDataFlow 4.8s linear infinite;transition:stroke .25s,stroke-width .25s,opacity .25s;opacity:.46}
+.map-links line.active{stroke:var(--accent);stroke-width:1.6;opacity:.95}
+@keyframes mapDataFlow{to{stroke-dashoffset:-52}}
+.map-node,.map-core{z-index:2;backdrop-filter:blur(9px)}
+.map-core{overflow:visible;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--accent) 15%,var(--panel)) 0%,rgba(14,19,28,.94) 58%,rgba(8,13,20,.93) 100%);box-shadow:0 0 58px color-mix(in srgb,var(--accent) 11%,transparent),inset 0 0 32px color-mix(in srgb,var(--accent) 6%,transparent)}
+.map-core::before{content:"";position:absolute;inset:13px;border:1px solid color-mix(in srgb,var(--accent) 44%,transparent);border-radius:50%;box-shadow:0 0 22px color-mix(in srgb,var(--accent) 16%,transparent);animation:holoCorePulse 2.8s ease-in-out infinite;pointer-events:none}
+.map-core::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 17px var(--accent);top:13px;left:50%;margin-left:-3.5px;animation:holoBeacon 2.8s ease-in-out infinite;pointer-events:none}
+.holo-orbit{position:absolute;left:50%;top:50%;width:148%;aspect-ratio:1;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 38%,transparent);pointer-events:none;transform-style:preserve-3d;opacity:.7}
+.holo-orbit.o1{animation:holoOrbit1 9s linear infinite}
+.holo-orbit.o2{width:122%;border-style:dashed;animation:holoOrbit2 6.5s linear infinite reverse;opacity:.48}
+.holo-orbit.o3{width:174%;animation:holoOrbit3 12s linear infinite;opacity:.28}
+@keyframes holoOrbit1{from{transform:translate(-50%,-50%) rotateX(70deg) rotateZ(0)}to{transform:translate(-50%,-50%) rotateX(70deg) rotateZ(360deg)}}
+@keyframes holoOrbit2{from{transform:translate(-50%,-50%) rotateY(68deg) rotateZ(18deg)}to{transform:translate(-50%,-50%) rotateY(68deg) rotateZ(378deg)}}
+@keyframes holoOrbit3{from{transform:translate(-50%,-50%) rotateX(58deg) rotateY(22deg) rotateZ(0)}to{transform:translate(-50%,-50%) rotateX(58deg) rotateY(22deg) rotateZ(-360deg)}}
+@keyframes holoCorePulse{50%{transform:scale(.9);opacity:.38}}
+@keyframes holoBeacon{50%{opacity:.28;box-shadow:0 0 7px var(--accent)}}
+.map-scan{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;border-radius:var(--r-md)}
+.map-scan::before{content:"";position:absolute;left:0;right:0;height:1px;top:0;background:linear-gradient(90deg,transparent,var(--accent),transparent);box-shadow:0 0 14px color-mix(in srgb,var(--accent) 55%,transparent);opacity:.45;animation:holoScan 5.5s linear infinite}
+@keyframes holoScan{0%{transform:translateY(44px)}100%{transform:translateY(520px)}}
+@media(max-width:720px){
+  .system-map{perspective:none}
+  .system-map::after,.map-grid::before,.map-links{display:none}
+  .map-grid{transform:none!important;transition:none}
+  .map-core{overflow:hidden}
+  .holo-orbit{opacity:.28}
+  .map-scan{display:none}
+}
+@media(max-width:480px){
+  .map-grid{gap:10px}
+  .map-node,.map-core{min-height:96px;padding:12px;font-size:9.5px}
+  .map-core b{font-size:19px}
+  .map-node::before{margin-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .map-links line,.holo-orbit,.map-core::before,.map-core::after,.map-scan::before{animation:none!important}
+  .map-grid{transform:none!important}
+}
+
+
+/* ============ RESPONSIVE QA / DEVICE HARDENING ============ */
+html{overflow-x:hidden;scroll-padding-top:24px}
+body{min-width:0;overflow-x:clip}
+.wrap{width:100%;min-width:0}
+img,svg,canvas{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+
+@media(max-width:1024px){
+  .wrap{padding-inline:clamp(20px,3vw,30px)}
+  section{padding:clamp(96px,11vw,128px) 0}
+  .hero .wrap{padding-inline:clamp(20px,3vw,30px)}
+  .chapter-mark .cm-in{padding-inline:clamp(20px,3vw,30px)}
+  .topbar{padding-inline:clamp(14px,2.4vw,22px)}
+}
+
+@media(max-width:760px){
+  :root{--s7:96px;--s6:72px;--s5:52px;--s4:34px;--s3:20px}
+  body{font-size:16px}
+  .wrap{padding-inline:18px}
+  section{padding:88px 0}
+  .topbar{padding:10px 14px;font-size:9px;letter-spacing:.055em}
+  .hero{min-height:100svh}
+  .hero .wrap{padding-top:100px;padding-bottom:76px}
+  .hero-tag{margin-bottom:18px}
+  .hero-tag .op{gap:10px}
+  .hero-tag .op img{width:48px;height:48px}
+  .hero-tag .op .m1{font-size:11.5px;letter-spacing:.14em}
+  .hero-tag .op .m2{font-size:11px}
+  h1.name{font-size:clamp(78px,26vw,128px);line-height:.84}
+  .hero-sub{margin-top:18px;gap:18px;align-items:flex-start}
+  .hero-role{font-size:clamp(24px,7.6vw,34px);max-width:22ch}
+  .hero-lede{font-size:15px;max-width:40ch}
+  .hero-cta{gap:10px;margin-top:26px}
+  .hero-cta .btn{min-height:48px}
+  .scrollcue{left:18px;bottom:14px}
+  .sec-head{margin-bottom:40px}
+  .sec-head h2{font-size:clamp(32px,10vw,50px)}
+  .intro .big{font-size:clamp(34px,10vw,56px)}
+  .lead-outreach{font-size:clamp(21px,6.8vw,29px);max-width:100%}
+  .cap{padding-block:20px}
+  .cap .d{font-size:14px}
+  .status-card{padding:24px}
+  .status-card h2{font-size:clamp(34px,11vw,54px)}
+  .contact .ct-big{font-size:clamp(52px,16vw,84px)}
+  .contact .ct-row{gap:22px}
+  .lb{padding:16px}
+  .lb .x{top:12px;right:12px}
+  .media-strip .ms-k::after{display:none}
+}
+
+@media(max-width:480px){
+  .topbar{justify-content:flex-end}
+  .topbar>span:first-child{display:none}
+  .hero-cta{display:grid;grid-template-columns:1fr;width:100%}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .impact-stat{padding:20px}
+  .doctrine-step{min-height:0}
+  .service-card,.scope-card,.sample-card{padding:20px}
+  .status-card::after{font-size:58px}
+  .ref .by{align-items:flex-start}
+}
+
+
+
+/* ============ MOBILE / TABLET NAVIGATION ============ */
+.mobile-nav-toggle,.mobile-nav{display:none}
+@media(max-width:1000px){
+  .mobile-nav-toggle{display:inline-flex;position:fixed;left:14px;top:42px;z-index:72;align-items:center;gap:9px;appearance:none;border:1px solid var(--line-2);background:rgba(7,9,14,.78);backdrop-filter:blur(12px);color:var(--ink);padding:9px 11px;border-radius:var(--r-sm);font:500 9.5px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+  .mobile-nav-toggle::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px color-mix(in srgb,var(--accent) 70%,transparent)}
+  .mobile-nav-toggle[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+  .mobile-nav{display:flex;position:fixed;inset:0;z-index:71;background:rgba(4,7,11,.82);backdrop-filter:blur(18px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),visibility .28s}
+  .mobile-nav.open{opacity:1;visibility:visible;pointer-events:auto}
+  .mobile-nav-panel{margin-left:auto;width:min(420px,88vw);height:100%;background:linear-gradient(180deg,rgba(14,19,28,.98),rgba(7,9,14,.99));border-left:1px solid var(--line-2);padding:88px 24px 28px;transform:translateX(22px);transition:transform .38s var(--ease);overflow-y:auto;overscroll-behavior:contain}
+  .mobile-nav.open .mobile-nav-panel{transform:none}
+  .mobile-nav-k{font:500 9.5px "JetBrains Mono",monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+  .mobile-nav-links{display:grid;border-top:1px solid var(--line)}
+  .mobile-nav-links a{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line);font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(21px,5vw,29px);font-weight:600;line-height:1;color:var(--ink)}
+  .mobile-nav-links a .mn-n{font:500 9px "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.12em}
+  .mobile-nav-links a .mn-a{font:500 13px "JetBrains Mono",monospace;color:var(--accent)}
+  .mobile-nav-foot{margin-top:24px;color:var(--muted);font:400 11px/1.55 "JetBrains Mono",monospace}
+  body.nav-open{overflow:hidden}
+}
+@media(max-width:480px){
+  .mobile-nav-toggle{top:10px;left:12px}
+  .mobile-nav-panel{width:100%;padding:76px 20px 24px}
+}
+
 </style>
 </head>
 <body>
@@ -641,6 +775,25 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <span class="live">STATUS <b>OPEN FOR WORK</b></span>
 </div>
 
+
+<button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">NAV</button>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-k">// Portfolio navigation</div>
+    <div class="mobile-nav-links">
+      <a href="#top"><span class="mn-n">00</span><span>Intro</span><span class="mn-a">↗</span></a>
+      <a href="#capabilities"><span class="mn-n">01</span><span>Capabilities</span><span class="mn-a">↗</span></a>
+      <a href="#method"><span class="mn-n">01B</span><span>Method</span><span class="mn-a">↗</span></a>
+      <a href="#growth"><span class="mn-n">02</span><span>Growth &amp; outreach</span><span class="mn-a">↗</span></a>
+      <a href="#cases"><span class="mn-n">03</span><span>Case studies</span><span class="mn-a">↗</span></a>
+      <a href="#proof"><span class="mn-n">04</span><span>Skill scope</span><span class="mn-a">↗</span></a>
+      <a href="#references"><span class="mn-n">05</span><span>References</span><span class="mn-a">↗</span></a>
+      <a href="#record"><span class="mn-n">06</span><span>Track record</span><span class="mn-a">↗</span></a>
+      <a href="#contact"><span class="mn-n">07</span><span>Contact</span><span class="mn-a">↗</span></a>
+    </div>
+    <div class="mobile-nav-foot">JOEY // FUTURISTIC PORTFOLIO · OPEN FOR WORK</div>
+  </div>
+</nav>
 <nav class="sidx" aria-label="Section index">
   <a href="#top"><span class="tx">INTRO</span><span class="ln"></span></a>
   <a href="#capabilities"><span class="tx">CAPABILITIES</span><span class="ln"></span></a>
@@ -738,11 +891,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
     <div class="system-map" data-reveal>
       <div class="map-k">// Community system map · hover / focus to inspect</div>
+      <div class="map-scan" aria-hidden="true"></div>
       <div class="map-grid" id="systemMap">
         <button class="map-node active" type="button" data-map="acquisition" data-title="Acquisition & outreach" data-copy="Bring in the right people through targeted communities, partnerships, creators and direct relationship-building — not empty vanity traffic.">Acquisition<br>&amp; outreach</button>
         <button class="map-node" type="button" data-map="onboarding" data-title="Onboarding" data-copy="Move a new sign-up toward a real human interaction quickly, then give them a clear path into the culture, systems and people of the community.">Onboarding<br>&amp; first contact</button>
         <button class="map-node" type="button" data-map="engagement" data-title="Engagement" data-copy="Recurring events, campaigns, world activity and feedback loops create reasons to return tomorrow instead of letting launch energy evaporate.">Engagement<br>&amp; events</button>
-        <div class="map-core"><b>COMMUNITY</b><small>A LIVING SYSTEM</small></div>
+        <div class="map-core"><span class="holo-orbit o1" aria-hidden="true"></span><span class="holo-orbit o2" aria-hidden="true"></span><span class="holo-orbit o3" aria-hidden="true"></span><b>COMMUNITY</b><small>A LIVING SYSTEM</small></div>
         <button class="map-node" type="button" data-map="governance" data-title="Governance & safety" data-copy="Rules, enforcement tiers, appeals, moderation logs, verification and server security keep expectations clear when pressure arrives.">Governance<br>&amp; safety</button>
         <button class="map-node" type="button" data-map="team" data-title="Staff & ownership" data-copy="Defined roles, department heads, recruitment, training and handoff turn a founder-dependent server into a team-owned operation.">Staff<br>&amp; ownership</button>
         <button class="map-node" type="button" data-map="growth" data-title="Retention & growth" data-copy="Track what keeps people active, listen to member behaviour, adjust structure and turn partnerships into compounding long-term growth.">Retention<br>&amp; growth</button>
@@ -1219,14 +1373,43 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 })();
 
-/* ---------- SYSTEM MAP ---------- */
+/* ---------- SYSTEM MAP / HOLOGRAPHIC HUD ---------- */
 (function(){
   const map=document.getElementById('systemMap');
   if(!map) return;
+  const shell=map.closest('.system-map');
   const title=document.getElementById('mapTitle'), copy=document.getElementById('mapCopy');
   const nodes=[...map.querySelectorAll('.map-node')];
+  const label=shell?.querySelector('.map-k');
+  const coarse=matchMedia('(pointer:coarse)').matches;
+  if(label) label.textContent=coarse?'// Community system map · tap to inspect':'// Community system map · move / focus to inspect';
+
+  const NS='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(NS,'svg');
+  svg.classList.add('map-links'); svg.setAttribute('aria-hidden','true');
+  map.prepend(svg);
+  const lines=new Map();
+
+  const drawLinks=()=>{
+    const core=map.querySelector('.map-core'); if(!core) return;
+    const mr=map.getBoundingClientRect(), cr=core.getBoundingClientRect();
+    const w=Math.max(1,map.clientWidth), h=Math.max(1,map.clientHeight);
+    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+    svg.innerHTML=''; lines.clear();
+    const cx=cr.left-mr.left+cr.width/2, cy=cr.top-mr.top+cr.height/2;
+    nodes.forEach(node=>{
+      const r=node.getBoundingClientRect();
+      const line=document.createElementNS(NS,'line');
+      line.setAttribute('x1',cx);line.setAttribute('y1',cy);
+      line.setAttribute('x2',r.left-mr.left+r.width/2);line.setAttribute('y2',r.top-mr.top+r.height/2);
+      line.dataset.link=node.dataset.map||'';
+      svg.appendChild(line); lines.set(node,line);
+    });
+  };
+
   const activate=node=>{
     nodes.forEach(n=>n.classList.toggle('active',n===node));
+    lines.forEach((line,n)=>line.classList.toggle('active',n===node));
     title.textContent=node.dataset.title||'';
     copy.textContent=node.dataset.copy||'';
   };
@@ -1235,6 +1418,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     node.addEventListener('focus',()=>activate(node));
     node.addEventListener('click',()=>activate(node));
   });
+
+  requestAnimationFrame(()=>{drawLinks();activate(nodes.find(n=>n.classList.contains('active'))||nodes[0]);});
+  if('ResizeObserver' in window) new ResizeObserver(()=>requestAnimationFrame(drawLinks)).observe(map);
+  else addEventListener('resize',drawLinks,{passive:true});
+
+  if(!coarse && !RM && shell){
+    shell.addEventListener('pointermove',e=>{
+      const r=shell.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+      map.style.setProperty('--map-ry',`${((x-.5)*7).toFixed(2)}deg`);
+      map.style.setProperty('--map-rx',`${((.5-y)*4.5).toFixed(2)}deg`);
+    },{passive:true});
+    shell.addEventListener('pointerleave',()=>{
+      map.style.setProperty('--map-ry','0deg');
+      map.style.setProperty('--map-rx','0deg');
+    });
+  }
 })();
 
 /* ---------- CHART ---------- */
@@ -1421,5 +1621,22 @@ function setupPremiumMotion(){
 /* safety: if preloader somehow stalls, start anyway */
 setTimeout(()=>{ if(!started){ const p=document.getElementById('pre'); if(p)p.style.display='none'; start(); } }, 4000);
 </script>
+
+<script>
+/* ---------- MOBILE / TABLET NAV ---------- */
+(function(){
+  const btn=document.querySelector('.mobile-nav-toggle');
+  const nav=document.getElementById('mobileNav');
+  if(!btn||!nav) return;
+  const panel=nav.querySelector('.mobile-nav-panel');
+  const close=()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');};
+  const open=()=>{nav.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');};
+  btn.addEventListener('click',()=>nav.classList.contains('open')?close():open());
+  nav.addEventListener('click',e=>{if(e.target===nav) close();});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open'))close();});
+})();
+</script>
+
 </body>
 </html>
