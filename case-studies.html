@@ -339,7 +339,7 @@ section{position:relative;z-index:3;background:var(--void);padding:var(--s7) 0}
 /* ============ AVAILABILITY / CV ============ */
 .availability{padding:var(--s6) 0;border-top:1px solid var(--line)}
 .status-card{border:1px solid var(--line);border-radius:var(--r-md);background:linear-gradient(135deg,var(--panel),var(--void-2));padding:var(--s4);display:grid;grid-template-columns:1.15fr .85fr;gap:var(--s5);align-items:center;position:relative;overflow:hidden}
-.status-card::after{content:"AESRC-24";position:absolute;right:-18px;bottom:-42px;font-family:"Bricolage Grotesque";font-weight:800;font-size:110px;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--line);opacity:.65;pointer-events:none}
+.status-card::after{content:"JOEY";position:absolute;right:-18px;bottom:-42px;font-family:"Bricolage Grotesque";font-weight:800;font-size:110px;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px var(--line);opacity:.65;pointer-events:none}
 .status-card .status-live{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}.status-card .status-live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);margin-right:9px}
 .status-card h2{font-size:clamp(34px,5vw,58px);max-width:11ch}.status-card p{color:var(--muted);max-width:48ch;margin:18px 0 0}
 .role-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.role-chips span{border:1px solid var(--line-2);padding:7px 10px;font:10.5px "JetBrains Mono";color:var(--muted);background:var(--void-2)}
@@ -623,12 +623,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <div class="pre" id="pre" aria-hidden="true">
   <div class="pnum" id="preNum">00</div>
   <div class="pbar"><i id="preBar"></i></div>
-  <div class="pk">DECRYPTING CASE FILES <b>AESRC-24</b> · <span id="preState">ESTABLISHING LINK</span></div>
+  <div class="pk">LOADING CASE STUDIES <b>JOEY</b> · <span id="preState">INITIALIZING ARCHIVE</span></div>
 </div>
 
 <div class="topbar" aria-hidden="true">
-  <span>SCiPNET // CASE_STUDIES</span>
-  <span class="live">OPERATIVE <b>JOEY</b> — FIELD EVIDENCE</span>
+  <span>JOEY // CASE_STUDIES</span>
+  <span class="live">PROJECT ARCHIVE <b>ONLINE</b></span>
 </div>
 
 <nav class="sidx" aria-label="Case study index">
@@ -642,8 +642,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <canvas id="aurora-canvas" aria-hidden="true"></canvas>
   <div class="hero-bg" aria-hidden="true"><img src="assets/hero-aurora.webp" alt=""></div>
   <div class="wrap">
-    <a class="case-back" href="index.html">← Back to main dossier</a>
-    <div class="hero-tag"><div class="op"><img src="assets/operative.webp" alt="Operative identification photo"><div><div class="m1">Evidence Archive · AESRC-24</div><div class="m2">Two projects · systems, outcomes &amp; visual work</div></div></div></div>
+    <a class="case-back" href="index.html">← Back to portfolio</a>
+    <div class="hero-tag"><div class="op"><img src="assets/operative.webp" alt="Profile identification photo"><div><div class="m1">Project Archive // Joey</div><div class="m2">Two projects · systems, outcomes &amp; visual work</div></div></div></div>
     <h1 class="name" id="heroName" aria-label="Case studies">CASES</h1>
     <div class="hero-sub">
       <div class="hero-role" data-reveal>Not a list of claims. The work behind them.</div>
@@ -655,14 +655,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <a href="index.html" class="btn">Main page</a>
     </div>
   </div>
-  <div class="scrollcue" aria-hidden="true"><span class="bar"></span>CASE FILES</div>
+  <div class="scrollcue" aria-hidden="true"><span class="bar"></span>CASE STUDIES</div>
 </header>
 
 <div class="chapter" id="aurora" data-theme="aurora">
   <div class="chapter-mark">
     <img src="assets/aurora-watch.webp" alt="Project Aurora — arctic surface observation post under the aurora" data-parallax>
     <div class="cm-in">
-      <div class="file" data-reveal>Case File 01 · Project Aurora</div>
+      <div class="file" data-reveal>Case Study 01 · Project Aurora</div>
       <h2 data-reveal-line><span>PROJECT</span></h2>
       <h2 data-reveal-line><span>AURORA</span></h2>
       <p class="sub" data-reveal>An 18+ sci-fi roleplay world I've built and directed since day one — from a cold launch to a living community.</p>
@@ -749,7 +749,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="chapter-mark">
     <img src="assets/crimson-mark.webp" alt="Crimson Shield International brand banner" data-parallax>
     <div class="cm-in">
-      <div class="file" data-reveal>Case File 02 · Crimson Network</div>
+      <div class="file" data-reveal>Case Study 02 · Crimson Network</div>
       <h2 data-reveal-line><span>CRIMSON</span></h2>
       <h2 data-reveal-line><span>NETWORK</span></h2>
       <p class="sub" data-reveal>An international multi-game network I directed — and the self-running team I built to run it.</p>
@@ -824,8 +824,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <section class="case-close" id="case-contact">
   <div class="wrap case-close-grid">
-    <div data-reveal><p class="eyebrow">// End of evidence archive</p><h2>Need the system behind your community?</h2><p>The main dossier has the full capability map, experience, references and contact details.</p></div>
-    <div class="case-close-actions" data-reveal><a class="btn primary" href="index.html">Back to main dossier →</a><a class="btn" href="mailto:joeyinsync@gmail.com">Email me</a></div>
+    <div data-reveal><p class="eyebrow">// End of project archive</p><h2>Need the system behind your community?</h2><p>The main portfolio has the full capability map, experience, references and contact details.</p></div>
+    <div class="case-close-actions" data-reveal><a class="btn primary" href="index.html">Back to portfolio →</a><a class="btn" href="mailto:joeyinsync@gmail.com">Email me</a></div>
   </div>
 </section>
 
@@ -906,7 +906,7 @@ if(RM) document.body.classList.add('no-motion');
 (function(){
   const pre=document.getElementById('pre'), bar=document.getElementById('preBar'),
         num=document.getElementById('preNum'), st=document.getElementById('preState');
-  const states=['ESTABLISHING LINK','VERIFYING CLEARANCE','LOADING FIELD ASSETS','FILE READY'];
+  const states=['INITIALIZING ARCHIVE','SYNCING PROJECT DATA','LOADING VISUAL ASSETS','CASE STUDIES READY'];
   if(RM){ pre.style.display='none'; start(); return; }
   let p=0, si=0;
   const iv=setInterval(()=>{
