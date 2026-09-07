@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-2MSJ1meNFeupFz6R7CFV4EK6u4oBPKNMX+N+cngjEDs=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-qWqQu36SoB2Zh1Ncr6Ft6noJi/ZjTUtkCnK1nV7SqYs=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joey — Community Architect & Writer</title>
@@ -1297,7 +1297,7 @@ function start(){
   }
   gsap.registerPlugin(ScrollTrigger);
 
-  const nm=document.getElementById('heroName'); const txt=nm.textContent; nm.innerHTML='';
+  const nm=document.getElementById('heroName'); const txt=nm.textContent; nm.replaceChildren();
   [...txt].forEach(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;nm.appendChild(s);});
   if(!RM){
     gsap.from('#heroName .ch',{yPercent:120,opacity:0,duration:1,ease:'expo.out',stagger:.06,delay:.1});
@@ -1474,7 +1474,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     const mr=map.getBoundingClientRect(), cr=core.getBoundingClientRect();
     const w=Math.max(1,map.clientWidth), h=Math.max(1,map.clientHeight);
     svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
-    svg.innerHTML=''; lines.clear();
+    svg.replaceChildren(); lines.clear();
     const cx=cr.left-mr.left+cr.width/2, cy=cr.top-mr.top+cr.height/2;
     nodes.forEach(node=>{
       const r=node.getBoundingClientRect();
@@ -1522,7 +1522,10 @@ function buildChart(){
   const c=document.getElementById('chart'); if(!c||c.childElementCount)return; const max=Math.max(...DAYS);
   DAYS.forEach((v,i)=>{
     const bar=document.createElement('div'); bar.className='bar';
-    bar.innerHTML=`<span class="bv tnum">${v.toLocaleString()}</span><i></i><span class="bd">D${i+1}</span>`;
+    const value=document.createElement('span'); value.className='bv tnum'; value.textContent=v.toLocaleString();
+    const fill=document.createElement('i');
+    const day=document.createElement('span'); day.className='bd'; day.textContent=`D${i+1}`;
+    bar.append(value,fill,day);
     c.appendChild(bar);
   });
   const bars=c.querySelectorAll('.bar i');
@@ -1719,4 +1722,3 @@ setTimeout(()=>{ if(!started){ const p=document.getElementById('pre'); if(p)p.st
 
 </body>
 </html>
-

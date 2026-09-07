@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-LeZgCxAPyBmS23YUlXj9UT6gDZhqyaLfA6cvP6ll0LY=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-NOLIy7JxJB+NdWxw0vifa3Uj0Tb5I3wss86NVR+8n1M=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Case Studies — Joey · Community Architect</title>
@@ -1136,7 +1136,7 @@ function start(){
   }
   gsap.registerPlugin(ScrollTrigger);
 
-  const nm=document.getElementById('heroName'); const txt=nm.textContent; nm.innerHTML='';
+  const nm=document.getElementById('heroName'); const txt=nm.textContent; nm.replaceChildren();
   [...txt].forEach(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;nm.appendChild(s);});
   if(!RM){
     gsap.from('#heroName .ch',{yPercent:120,opacity:0,duration:1,ease:'expo.out',stagger:.06,delay:.1});
@@ -1180,7 +1180,12 @@ function start(){
   });
 
   ScrollTrigger.refresh();
-  if(location.hash){ const target=document.querySelector(location.hash); if(target) setTimeout(()=>{ if(lenis) lenis.scrollTo(target,{duration:.8}); else target.scrollIntoView(); },180); }
+  if(location.hash){
+    let id='';
+    try{id=decodeURIComponent(location.hash.slice(1));}catch{}
+    const target=id?document.getElementById(id):null;
+    if(target) setTimeout(()=>{ if(lenis) lenis.scrollTo(target,{duration:.8}); else target.scrollIntoView(); },180);
+  }
   // robustness: re-measure after fonts/images load, and force-reveal anything already in view
   window.addEventListener('load', ()=>ScrollTrigger.refresh());
   const sweep=()=>{
@@ -1316,7 +1321,10 @@ function buildChart(){
   const c=document.getElementById('chart'); if(!c||c.childElementCount)return; const max=Math.max(...DAYS);
   DAYS.forEach((v,i)=>{
     const bar=document.createElement('div'); bar.className='bar';
-    bar.innerHTML=`<span class="bv tnum">${v.toLocaleString()}</span><i></i><span class="bd">D${i+1}</span>`;
+    const value=document.createElement('span'); value.className='bv tnum'; value.textContent=v.toLocaleString();
+    const fill=document.createElement('i');
+    const day=document.createElement('span'); day.className='bd'; day.textContent=`D${i+1}`;
+    bar.append(value,fill,day);
     c.appendChild(bar);
   });
   const bars=c.querySelectorAll('.bar i');
@@ -1514,4 +1522,3 @@ setTimeout(()=>{ if(!started){ const p=document.getElementById('pre'); if(p)p.st
 
 </body>
 </html>
-
