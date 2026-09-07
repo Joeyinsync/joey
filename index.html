@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-2MSJ1meNFeupFz6R7CFV4EK6u4oBPKNMX+N+cngjEDs=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joey — Community Architect & Writer</title>
 <meta name="description" content="Joey — community architect and writer. I take a new or dying online community and make it alive, then build the onboarding, governance, teams, events and outreach that keep it that way.">
@@ -22,7 +24,7 @@
 /* ============ TOKENS ============ */
 :root{
   --void:#07090e; --void-2:#0a0e15; --panel:#0e131c; --panel-2:#121a26; --line:#1b2636; --line-2:#243247;
-  --ink:#eef2f8; --muted:#93a4bb; --dim:#5d6f88;
+  --ink:#eef2f8; --muted:#93a4bb; --dim:#8495ad;
   --aurora:#3fe0c5; --aurora-2:#79ecd8; --aurora-deep:#12655a;
   --crim:#e5533d; --crim-2:#ff8a76;
   --accent:var(--aurora); --accent-2:var(--aurora-2); --accent-deep:var(--aurora-deep);
@@ -775,9 +777,21 @@ button,a{-webkit-tap-highlight-color:transparent}
   .floating-contact{right:calc(12px + env(safe-area-inset-right));bottom:calc(12px + env(safe-area-inset-bottom));padding:12px 14px;font-size:10px}
 }
 
+
+/* Accessibility: readable secondary text and keyboard controls. */
+.skip-link{position:fixed;top:8px;left:8px;z-index:10001;padding:12px 18px;background:var(--ink);color:var(--void);transform:translateY(-160%)}
+.skip-link:focus{transform:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.showcase-pause{position:absolute;left:14px;top:14px;z-index:8;min-height:44px;padding:8px 12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:12px "JetBrains Mono",monospace;cursor:pointer}
+footer a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+html.assets-unavailable [data-reveal],html.assets-unavailable [data-reveal-line]>*{opacity:1!important;transform:none!important;clip-path:none!important}
+html.assets-unavailable #pre{display:none!important}
+
 </style>
+<noscript><style>#pre{display:none!important}[data-reveal],[data-reveal-line]>*{opacity:1!important;transform:none!important;clip-path:none!important}.cur,.cur-dot{display:none!important}body,a,button{cursor:auto!important}</style></noscript>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
 <div id="readProgress" aria-hidden="true"></div>
 <div class="cur" aria-hidden="true"></div><div class="cur-dot" aria-hidden="true"></div>
@@ -830,6 +844,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   <a href="#contact"><span class="tx">CONTACT</span><span class="ln"></span></a>
 </nav>
 
+<main id="main-content" tabindex="-1">
 <header class="hero" id="top">
   <canvas id="aurora-canvas" aria-hidden="true"></canvas>
   <div class="hero-bg" aria-hidden="true"><img src="assets/hero-aurora.webp" alt=""></div>
@@ -851,7 +866,7 @@ button,a{-webkit-tap-highlight-color:transparent}
     <div class="hero-cta" data-reveal>
       <a href="case-studies.html" class="btn primary" id="magnetBtn">View case studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="mailto:joeyinsync@gmail.com" class="btn">Get in touch</a>
-      <a href="https://www.fiverr.com/joeyinsync/" class="btn" target="_blank" rel="noopener">Fiverr profile</a>
+      <a href="https://www.fiverr.com/joeyinsync/" class="btn" target="_blank" rel="noopener noreferrer">Fiverr profile</a>
     </div>
   </div>
   <div class="scrollcue" aria-hidden="true"><span class="bar"></span>SCROLL</div>
@@ -1116,7 +1131,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   <div class="wrap">
     <div class="status-card" data-reveal>
       <div><div class="status-live">Open for work</div><h2>Bring me the community problem.</h2><p>Best fit: roles where I can own the system behind the community — not only post into it. Launch, operations, retention, team structure, growth and community-facing writing.</p><div class="role-chips"><span>Community Manager</span><span>Community Operations</span><span>Community Strategy</span><span>Discord / Community Systems</span><span>Growth &amp; Outreach</span></div></div>
-      <div class="status-actions"><div class="sa-k">Portfolio actions</div><a class="btn primary" href="mailto:joeyinsync@gmail.com">Open a line <span>→</span></a><a class="btn" href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener">Upwork profile <span>↗</span></a><a class="btn" href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener">Fiverr profile <span>↗</span></a></div>
+      <div class="status-actions"><div class="sa-k">Portfolio actions</div><a class="btn primary" href="mailto:joeyinsync@gmail.com">Open a line <span>→</span></a><a class="btn" href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener noreferrer">Upwork profile <span>↗</span></a><a class="btn" href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener noreferrer">Fiverr profile <span>↗</span></a></div>
     </div>
   </div>
 </section>
@@ -1127,23 +1142,25 @@ button,a{-webkit-tap-highlight-color:transparent}
     <div class="ct-big" data-reveal><a href="mailto:joeyinsync@gmail.com">Let's build<br>something alive.</a></div>
     <div class="ct-actions">
       <a class="btn primary" href="mailto:joeyinsync@gmail.com">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn" href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener">Hire me on Upwork</a>
-      <a class="btn" href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener">Hire me on Fiverr</a>
+      <a class="btn" href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener noreferrer">Hire me on Upwork</a>
+      <a class="btn" href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener noreferrer">Hire me on Fiverr</a>
     </div>
     <div class="ct-row">
       <div><b>Email</b><a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a></div>
       <div><b>Discord</b><span>joeyinsync</span></div>
-      <div><b>Upwork</b><a href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener">Upwork profile</a></div>
-      <div><b>Fiverr</b><a href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener">Fiverr profile</a></div>
+      <div><b>Upwork</b><a href="https://www.upwork.com/freelancers/~01029fa938c2eb5634" target="_blank" rel="noopener noreferrer">Upwork profile</a></div>
+      <div><b>Fiverr</b><a href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener noreferrer">Fiverr profile</a></div>
       <div><b>Status</b><span>Open for work</span></div>
     </div>
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <span>JOEY // FUTURE-FACING PORTFOLIO · Built &amp; written by Joey</span>
     <span>ANALYZE · BUILD · SUSTAIN</span>
+    <a href="privacy.html">Privacy policy</a>
   </div>
 </footer>
 
@@ -1153,10 +1170,40 @@ button,a{-webkit-tap-highlight-color:transparent}
   <div class="cap" id="lbCap"></div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.14/lenis.min.js"></script>
+<script src="assets/vendor/gsap-3.12.5.min.js" integrity="sha384-PAX94Qh72Cf8M9SvjTG9r+nyrBjHOj2VPvrBscw0n+LoOsTlOR8q4a6yFqH1yDxa"></script>
+<script src="assets/vendor/ScrollTrigger-3.12.5.min.js" integrity="sha384-ICxtaB/LVd7PqKdXhz0bTN10g+C+vQrmIXIQHISaJwYfV6b6d8FInWMrPIG8rhsp"></script>
 <script>
+/* Shared keyboard handling for the image viewer and mobile navigation. */
+window.portfolioDialog = (() => {
+  let state = null;
+  const items = el => [...el.querySelectorAll('a[href],button,[tabindex="0"]')].filter(n => !n.disabled && n.getClientRects().length);
+  const close = () => {
+    if (!state) return;
+    const old = state; state = null;
+    old.hidden.forEach(([el, value]) => { el.inert = value; });
+    document.body.style.overflow = old.overflow;
+    if (old.trigger?.isConnected) old.trigger.focus({preventScroll:true});
+  };
+  const open = (el, trigger, extra = null) => {
+    if (state) close();
+    const hidden = [...document.body.children].filter(n => n !== el && n !== extra && !['SCRIPT','STYLE','LINK'].includes(n.tagName)).map(n => [n,n.inert]);
+    state = {el,trigger,extra,hidden,overflow:document.body.style.overflow};
+    hidden.forEach(([n]) => {n.inert = true;});
+    document.body.style.overflow = 'hidden';
+    (items(el)[0] || el).focus({preventScroll:true});
+  };
+  document.addEventListener('keydown', e => {
+    if (!state || e.key !== 'Tab') return;
+    const list = items(state.el);
+    if (state.extra) list.push(state.extra);
+    if (!list.length) {e.preventDefault(); return;}
+    const i = list.indexOf(document.activeElement);
+    if (e.shiftKey && i <= 0) {e.preventDefault();list[list.length-1].focus();}
+    else if (!e.shiftKey && (i < 0 || i === list.length-1)) {e.preventDefault();list[0].focus();}
+  });
+  return {open,close};
+})();
+
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(RM) document.body.classList.add('no-motion');
 
@@ -1225,7 +1272,7 @@ if(RM) document.body.classList.add('no-motion');
   const pre=document.getElementById('pre'), bar=document.getElementById('preBar'),
         num=document.getElementById('preNum'), st=document.getElementById('preState');
   const states=['INITIALIZING INTERFACE','SYNCING CONTENT','LOADING PROJECT ASSETS','PORTFOLIO READY'];
-  if(RM){ pre.style.display='none'; start(); return; }
+  if(RM || !window.gsap || !window.ScrollTrigger){ pre.style.display='none'; queueMicrotask(start); return; }
   let p=0, si=0;
   const iv=setInterval(()=>{
     p=Math.min(100, p + Math.random()*16 + 6);
@@ -1242,6 +1289,7 @@ if(RM) document.body.classList.add('no-motion');
 let lenis, started=false;
 function start(){
   if(started) return; started=true;
+  if(!window.gsap || !window.ScrollTrigger){document.documentElement.classList.add("assets-unavailable");return;}
   if(!RM && window.Lenis){
     lenis=new Lenis({duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
     lenis.on('scroll',()=>ScrollTrigger.update());
@@ -1310,8 +1358,10 @@ function start(){
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
-    const id=a.getAttribute('href'); const el=document.querySelector(id);
+    const id=a.getAttribute('href'); const el=id.length>1?document.getElementById(id.slice(1)):null;
     if(!el)return; e.preventDefault();
+    if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','-1');
+    el.focus({preventScroll:true});
     if(lenis) lenis.scrollTo(el,{offset:0,duration:1.3}); else el.scrollIntoView({behavior:RM?'auto':'smooth'});
   });
 });
@@ -1329,7 +1379,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     const count=slider.querySelector('.showcase-count');
     const progress=slider.querySelector('.showcase-progress i');
     const prev=slider.querySelector('[data-prev]'), next=slider.querySelector('[data-next]');
-    let index=0, timer=null, paused=false, inView=false, touchX=null;
+    let index=0, timer=null, paused=false, inView=false, touchX=null, manuallyPaused=false;
+    const pause=document.createElement('button');pause.type='button';pause.className='showcase-pause';pause.textContent='Pause slideshow';pause.setAttribute('aria-pressed','false');
+    if(!RM) slider.querySelector('.showcase-stage').appendChild(pause);
+    pause.addEventListener('click',()=>{manuallyPaused=!manuallyPaused;pause.textContent=manuallyPaused?'Resume slideshow':'Pause slideshow';pause.setAttribute('aria-pressed',String(manuallyPaused));setPaused(slider.matches(':hover')||slider.contains(document.activeElement));});
 
     const restartProgress=()=>{
       slider.classList.remove('is-running');
@@ -1357,18 +1410,19 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     };
     const schedule=()=>{
       clearTimeout(timer);
-      if(RM || paused || !inView) return;
+      if(RM || paused || manuallyPaused || !inView || document.hidden) return;
       timer=setTimeout(()=>{show(index+1);schedule();},5800);
     };
-    const setPaused=value=>{paused=value;slider.classList.toggle('is-paused',value);if(value)clearTimeout(timer);else schedule();};
+    const setPaused=value=>{paused=value;slider.classList.toggle('is-paused',value||manuallyPaused);if(value||manuallyPaused)clearTimeout(timer);else schedule();};
 
     prev?.addEventListener('click',e=>{e.stopPropagation();show(index-1,true)});
     next?.addEventListener('click',e=>{e.stopPropagation();show(index+1,true)});
     thumbs.forEach((thumb,i)=>thumb.addEventListener('click',()=>show(i,true)));
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(timer);else schedule();});
     slider.addEventListener('mouseenter',()=>setPaused(true));
-    slider.addEventListener('mouseleave',()=>setPaused(false));
+    slider.addEventListener('mouseleave',()=>setPaused(slider.contains(document.activeElement)));
     slider.addEventListener('focusin',()=>setPaused(true));
-    slider.addEventListener('focusout',e=>{if(!slider.contains(e.relatedTarget))setPaused(false)});
+    slider.addEventListener('focusout',e=>{if(!slider.contains(e.relatedTarget))setPaused(slider.matches(':hover'))});
 
     slides.forEach(slide=>{
       slide.setAttribute('role','button');
@@ -1378,7 +1432,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
         const im=slide.querySelector('img');
         lbImg.src=im.src; lbImg.alt=im.alt;
         if(lbCap) lbCap.textContent=slide.querySelector('figcaption')?.textContent||'';
-        lb.classList.add('open'); if(lbX) lbX.focus(); if(lenis) lenis.stop();
+        lb.classList.add('open'); portfolioDialog.open(lb,slide); if(lenis) lenis.stop();
       };
       slide.addEventListener('click',open);
       slide.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
@@ -1485,16 +1539,15 @@ function buildChart(){
 (function(){
   const lb=document.getElementById('lb'), img=document.getElementById('lbImg'),
         cap=document.getElementById('lbCap'), x=document.getElementById('lbX');
-  let lastFocus=null;
   document.querySelectorAll('[data-lb]').forEach(f=>{
     f.tabIndex=0; f.setAttribute('role','button');
     const open=()=>{ const im=f.querySelector('img'); img.src=im.src; img.alt=im.alt;
       cap.textContent=(f.querySelector('figcaption')?.textContent||'').replace(/^\/\/\s*/,'');
-      lb.classList.add('open'); lastFocus=f; x.focus(); if(lenis)lenis.stop(); };
+      lb.classList.add('open'); portfolioDialog.open(lb,f); if(lenis)lenis.stop(); };
     f.addEventListener('click',open);
     f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
   });
-  const close=()=>{ lb.classList.remove('open'); if(lenis)lenis.start(); if(lastFocus)lastFocus.focus(); };
+  const close=()=>{ lb.classList.remove('open'); if(lenis)lenis.start(); portfolioDialog.close(); };
   x.addEventListener('click',close);
   lb.addEventListener('click',e=>{if(e.target===lb)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))close();});
@@ -1654,14 +1707,16 @@ setTimeout(()=>{ if(!started){ const p=document.getElementById('pre'); if(p)p.st
   const nav=document.getElementById('mobileNav');
   if(!btn||!nav) return;
   const panel=nav.querySelector('.mobile-nav-panel');
-  const close=()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');};
-  const open=()=>{nav.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');};
+  const close=()=>{if(!nav.classList.contains('open'))return;nav.classList.remove('open');portfolioDialog.close();btn.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');};
+  const open=()=>{nav.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');portfolioDialog.open(nav,btn,btn);};
   btn.addEventListener('click',()=>nav.classList.contains('open')?close():open());
   nav.addEventListener('click',e=>{if(e.target===nav) close();});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{close();const href=a.getAttribute('href');if(href.startsWith('#')){const target=document.getElementById(href.slice(1));if(target){target.tabIndex=-1;target.focus({preventScroll:true});}}}));
+  matchMedia('(min-width: 1001px)').addEventListener('change',e=>{if(e.matches)close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open'))close();});
 })();
 </script>
 
 </body>
 </html>
+
