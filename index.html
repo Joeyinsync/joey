@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' https://platform.linkedin.com 'sha256-qWqQu36SoB2Zh1Ncr6Ft6noJi/ZjTUtkCnK1nV7SqYs=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://platform.linkedin.com https://static.licdn.com; font-src 'self' https://fonts.gstatic.com https://static.licdn.com; img-src 'self' data: https://joeyinsync.com https://media.licdn.com https://static.licdn.com https://platform.linkedin.com; connect-src https://www.linkedin.com https://platform.linkedin.com; frame-src https://www.linkedin.com https://platform.linkedin.com; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' 'sha256-qWqQu36SoB2Zh1Ncr6Ft6noJi/ZjTUtkCnK1nV7SqYs=' 'sha256-8FoL5rjX/E8pnsDNzBs77ayyVVo39PkaVgaoWFLCSoM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joey — Community Architect & Writer</title>
@@ -789,11 +789,6 @@ html.assets-unavailable #pre{display:none!important}
 
 </style>
 <noscript><style>#pre{display:none!important}[data-reveal],[data-reveal-line]>*{opacity:1!important;transform:none!important;clip-path:none!important}.cur,.cur-dot{display:none!important}body,a,button{cursor:auto!important}</style></noscript>
-<style>
-.linkedin-badge{margin-top:var(--s3);max-width:100%;min-height:90px;overflow:hidden}
-.linkedin-badge .badge-base{max-width:100%}
-.linkedin-badge .badge-base__link{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:4px}
-</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -1159,11 +1154,6 @@ html.assets-unavailable #pre{display:none!important}
       <div><b>Fiverr</b><a href="https://www.fiverr.com/joeyinsync/" target="_blank" rel="noopener noreferrer">Fiverr profile</a></div>
       <div><b>LinkedIn</b><a href="https://www.linkedin.com/in/joeyinsync/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></div>
       <div><b>Status</b><span>Open for work</span></div>
-    </div>
-    <div class="linkedin-badge" data-reveal>
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="joeyinsync" data-version="v1">
-        <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/joeyinsync/?trk=profile-badge" target="_blank" rel="noopener noreferrer">View Joey on LinkedIn</a>
-      </div>
     </div>
   </div>
 </section>
@@ -1733,6 +1723,5 @@ setTimeout(()=>{ if(!started){ const p=document.getElementById('pre'); if(p)p.st
 })();
 </script>
 
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 </html>
