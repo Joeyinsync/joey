@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Archive — Joey</title>
+<meta name="description" content="Seven years of community work: full track record, capability scope, references and writing samples.">
+<link rel="canonical" href="https://joeyinsync.com/archive.html">
+<meta name="theme-color" content="#04060a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Archive — Joey">
+<meta property="og:description" content="Seven years of community work: track record, capability scope, references and writing samples.">
+<meta property="og:image" content="https://joeyinsync.com/assets/img/og-image.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/case.css">
+<link rel="stylesheet" href="assets/archive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="veil" id="veil" aria-hidden="true"><div class="veil-t" id="veilT"></div></div>
+<div class="cur" id="cur" aria-hidden="true"><span class="cur-lab" id="curLab"></span></div>
+<div class="cur-d" id="curD" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="index.html" data-to="Joey"><span class="dot" aria-hidden="true"></span><span class="mk">JOEY</span></a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index.html#work" data-to="Joey">Work</a>
+    <a href="aurora.html" data-to="Project Aurora">Aurora</a>
+    <a href="crimson.html" data-to="Crimson Network">Crimson</a>
+    <a href="archive.html" aria-current="page">Archive</a>
+    <a href="index.html#contact" data-to="Joey">Contact</a>
+  </nav>
+  <span class="nav-stat">Records <b>6</b></span>
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="index.html" data-to="Joey"><span class="n">←</span><span>Home</span><span class="x">↗</span></a>
+  <a href="aurora.html" data-to="Project Aurora"><span class="n">A</span><span>Aurora</span><span class="x">↗</span></a>
+  <a href="crimson.html" data-to="Crimson Network"><span class="n">B</span><span>Crimson</span><span class="x">↗</span></a>
+  <a href="index.html#contact" data-to="Joey"><span class="n">09</span><span>Contact</span><span class="x">↗</span></a>
+</nav>
+
+<div class="chap" id="chap" aria-hidden="true">
+  <b id="chapN">01</b><span class="rail"><i id="chapR"></i></span><span id="chapT">Record</span>
+</div>
+
+<main id="main" tabindex="-1">
+
+<header class="wrap ahero">
+  <a class="cback" href="index.html" data-to="Joey">← Back to portfolio</a>
+  <h1>THE<br>ARCHIVE</h1>
+  <p class="sub">Seven years of communities, the full capability scope, references, and the <em>writing</em> underneath it.</p>
+</header>
+
+<!-- ══ 01 · TRACK RECORD ═════════════════════════════════════ -->
+<section class="wrap sec" data-chapter="01" data-chapter-name="Record" id="record" style="padding-top:var(--s5)">
+  <div class="sec-hd"><span class="n">01</span><span class="t">Track record</span><span class="ln"></span><span class="t">Click a row to expand</span></div>
+
+  <div class="ctl">
+    <div class="ctl-g">
+      <span class="ctl-k">Filter</span>
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="rp" aria-pressed="false">Roleplay</button>
+      <button class="chip" type="button" data-filter="milsim" aria-pressed="false">Milsim</button>
+      <button class="chip" type="button" data-filter="network" aria-pressed="false">Network</button>
+    </div>
+    <div class="ctl-g">
+      <span class="ctl-k">Sort</span>
+      <button class="chip" type="button" data-sort="year" aria-pressed="true">Newest</button>
+      <button class="chip" type="button" data-sort="oldest" aria-pressed="false">Oldest</button>
+      <span class="ctl-count"><b id="recCount">6</b> records</span>
+    </div>
+  </div>
+
+  <div class="rec" id="rec">
+    <div class="rec-hd"><span>Year</span><span>Project</span><span>Role</span><span class="r">Scale</span></div>
+
+    <article class="rec-row" data-cat="rp" data-order="6">
+      <span class="yr">2025 —</span>
+      <h3>Project Aurora</h3>
+      <span class="role">Consultant → Canon Director → Executive Director</span>
+      <span class="peak">2,508 msgs/day</span>
+      <span class="cat">Roleplay</span>
+      <p class="d">Cold launch to a living 18+ world; ~99% of the build. Onboarding, governance, events, canon, security and the full visual identity. <a href="aurora.html" data-to="Project Aurora" style="color:var(--ac);border-bottom:1px solid currentColor">Open case study →</a></p>
+    </article>
+
+    <article class="rec-row" data-cat="network" data-order="5">
+      <span class="yr">2024 – 25</span>
+      <h3>Crimson Network</h3>
+      <span class="role">Overseer → Staff Manager</span>
+      <span class="peak">peak ~1,400</span>
+      <span class="cat">Network</span>
+      <p class="d">Built the staff team, then handed off to focus on new projects. <a href="crimson.html" data-to="Crimson Network" style="color:var(--ac);border-bottom:1px solid currentColor">Open case study →</a></p>
+    </article>
+
+    <article class="rec-row" data-cat="network" data-order="4">
+      <span class="yr">2023 – 24</span>
+      <h3>The Art of Warfare (TaW)</h3>
+      <span class="role">Contributor · strategic analysis</span>
+      <span class="peak">3,000+ network</span>
+      <span class="cat">Network</span>
+      <p class="d">Contributor to a 3,000+ member military-gaming network. Wrote a strategic analysis and a server-improvement consult focused on user psychology, retention and growth.</p>
+    </article>
+
+    <article class="rec-row" data-cat="rp" data-order="3">
+      <span class="yr">2022 – 23</span>
+      <h3>Site-202 "New World"</h3>
+      <span class="role">Lead developer &amp; organiser</span>
+      <span class="peak">peak ~500</span>
+      <span class="cat">Roleplay</span>
+      <p class="d">Launched after a teaser campaign; built political structure, lore and automated systems.</p>
+    </article>
+
+    <article class="rec-row" data-cat="milsim" data-order="2">
+      <span class="yr">2022</span>
+      <h3>DoomsdayRP — Milsim</h3>
+      <span class="role">Co-owner · faction co-lead</span>
+      <span class="peak">peak ~100–500</span>
+      <span class="cat">Milsim</span>
+      <p class="d">Rose through staff to faction co-lead; set staff-management and communication standards.</p>
+    </article>
+
+    <article class="rec-row" data-cat="rp" data-order="1">
+      <span class="yr">2019 – 21</span>
+      <h3>SCP RP — Site-19 &amp; SCP Universe</h3>
+      <span class="role">Founder &amp; owner</span>
+      <span class="peak">peak ~300 · ~200–400</span>
+      <span class="cat">Roleplay</span>
+      <p class="d">Built structured servers from scratch and organised staff teams.</p>
+    </article>
+
+    <div class="rec-empty" id="recEmpty" hidden>No records in this category</div>
+  </div>
+</section>
+
+<!-- ══ 02 · SCOPE ════════════════════════════════════════════ -->
+<section class="wrap sec" data-chapter="02" data-chapter-name="Scope" id="scope" style="padding-top:0">
+  <div class="sec-hd"><span class="n">02</span><span class="t">Full scope</span><span class="ln"></span></div>
+  <h2 class="big" data-rv style="max-width:16ch;margin-bottom:var(--s3)">What I can take ownership of</h2>
+  <p data-rv data-rv-d="1" style="color:var(--text-2);max-width:64ch;margin-bottom:var(--s5);font-size:16px">
+    <b style="color:var(--text)">This is not a six-item service menu.</b> Aurora and Crimson show specific systems in context; this is the wider range of community work I can own, combine and adapt around the actual problem.
+  </p>
+
+  <div class="scope" data-rv>
+    <article class="scope-c">
+      <div class="k">01 / Strategy &amp; architecture</div>
+      <h3>Build the community system</h3>
+      <p>Diagnose the whole member journey, then design the structure that makes activity, trust and retention repeatable.</p>
+      <div class="cloud">
+        <span>Community audits</span><span>Launch planning</span><span>Discord architecture</span><span>Onboarding journeys</span><span>Retention systems</span><span>Governance design</span><span>Channel restructuring</span><span>Progression systems</span><span>Trust / reputation systems</span><span>Feedback loops</span><span>Member psychology</span><span>Community strategy</span>
+      </div>
+    </article>
+    <article class="scope-c">
+      <div class="k">02 / People &amp; operations</div>
+      <h3>Make the team run cleanly</h3>
+      <p>Turn founder-dependence and improvised moderation into clear ownership, trained people and operating standards.</p>
+      <div class="cloud">
+        <span>Staff org design</span><span>Recruiting</span><span>Application flows</span><span>Staff training</span><span>Department ownership</span><span>Escalation paths</span><span>Moderation systems</span><span>Mod logs</span><span>Rules &amp; enforcement</span><span>Event / GM playbooks</span><span>Handoff &amp; continuity</span><span>Operational documentation</span>
+      </div>
+    </article>
+    <article class="scope-c">
+      <div class="k">03 / Growth &amp; engagement</div>
+      <h3>Bring people in — and give them reasons to stay</h3>
+      <p>Growth is a loop, not a shoutout: research, outreach, collaborations, events, follow-up and the retention layer behind it.</p>
+      <div class="cloud">
+        <span>Community outreach</span><span>Partnership development</span><span>Discord partner sourcing</span><span>Lead research</span><span>Personalised outreach</span><span>Follow-up systems</span><span>Creator collaborations</span><span>Community collaborations</span><span>Events &amp; campaigns</span><span>Engagement loops</span><span>Marketing</span><span>Social content planning</span>
+      </div>
+    </article>
+    <article class="scope-c">
+      <div class="k">04 / Voice, world &amp; infrastructure</div>
+      <h3>Give the community a voice — and a safe place to live</h3>
+      <p>The visible layer matters too: writing, worldbuilding, identity and the infrastructure that keeps the server readable and resilient.</p>
+      <div class="cloud">
+        <span>Announcements</span><span>Recruitment copy</span><span>Rules &amp; guides</span><span>Lore</span><span>Worldbuilding</span><span>Community voice</span><span>Visual identity direction</span><span>Campaign concepts</span><span>Server setup</span><span>Verification</span><span>Anti-raid / anti-nuke</span><span>Security &amp; permissions</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="smore" data-rv>
+    <div class="big">Much more.</div>
+    <p><b>If it touches the member journey, the staff operating system, community growth or the community's voice, it is probably in my lane.</b> The exact mix changes with the project — I would rather solve the real problem than force every client into the same package.</p>
+    <div class="code">Scope<br>Adaptive</div>
+  </div>
+</section>
+
+<!-- ══ 03 · GROWTH & OUTREACH ════════════════════════════════ -->
+<section class="wrap sec" data-chapter="03" data-chapter-name="Growth" id="growth" style="padding-top:0">
+  <div class="sec-hd"><span class="n">03</span><span class="t">Growth &amp; outreach</span><span class="ln"></span></div>
+  <p data-rv style="font-family:var(--f-e);font-size:clamp(21px,3vw,36px);line-height:1.2;max-width:38ch;margin-bottom:var(--s5)">
+    I help communities grow through <span style="color:var(--ac)">targeted outreach, partnerships, and relationship-building</span> — from identifying relevant communities and decision-makers to personalised outreach, follow-ups, collaboration planning, and long-term partnership development.
+  </p>
+  <div class="spec" data-rv>
+    <div class="spec-c"><div class="k">Growth</div><h4>Community outreach &amp; growth</h4><p>Finding and reaching the right communities, then turning that reach into members and real momentum — not vanity numbers.</p></div>
+    <div class="spec-c"><div class="k">Partnerships</div><h4>Partnership development</h4><p>Building long-term partnerships with communities, creators and studios — relationships that compound, not one-off shoutouts.</p></div>
+    <div class="spec-c"><div class="k">Discord</div><h4>Discord partnership outreach</h4><p>Identifying and approaching relevant Discord servers for cross-promotion, partner channels and collaboration.</p></div>
+    <div class="spec-c"><div class="k">Research</div><h4>Community research &amp; lead sourcing</h4><p>Mapping the landscape — relevant communities, decision-makers and the right person to actually contact.</p></div>
+    <div class="spec-c"><div class="k">Collab</div><h4>Creator / community collaboration</h4><p>Planning and running collaborations that put your community in front of aligned, already-warm audiences.</p></div>
+    <div class="spec-c"><div class="k">Process</div><h4>Outreach strategy &amp; tracking</h4><p>A repeatable outreach process with personalised messaging, follow-ups and tracking — so growth is a system, not guesswork.</p></div>
+  </div>
+</section>
+
+<!-- ══ 04 · REFERENCES ═══════════════════════════════════════ -->
+<section class="wrap sec" data-chapter="04" data-chapter-name="References" id="references" style="padding-top:0">
+  <div class="sec-hd"><span class="n">04</span><span class="t">References</span><span class="ln"></span></div>
+  <div class="refs">
+    <blockquote class="ref" data-rv>
+      <div class="k">Working reference · Owner / founder</div>
+      <p class="q"><span class="mk">&ldquo;</span>Joey built the backbone of both my communities. On Aurora he took an empty server to thousands of messages a day and designed the onboarding, rules and events that kept it running. On Crimson he built and trained a staff team that ran itself after he moved on. He's who I'd trust with community structure.<span class="mk">&rdquo;</span></p>
+      <div class="by"><span class="av"><img src="assets/img/mikey.webp" alt="Mikey avatar" loading="lazy"></span><span><b>Mikey</b>Owner &amp; Founder · Crimson Network / Project Aurora</span></div>
+      <div class="sc">Scope witnessed: launch · onboarding · governance · events · staff systems</div>
+    </blockquote>
+    <blockquote class="ref" data-rv data-rv-d="1">
+      <div class="k">Working reference · Strategic review</div>
+      <p class="q"><span class="mk">&ldquo;</span>Clearly documented, showing exactly what needed to be adjusted or added, and which parts were your own design. Your critical analysis of our structure is a skill highly valued; I would most certainly recommend you for a position where you can express it to the fullest.<span class="mk">&rdquo;</span></p>
+      <div class="by"><span class="av"><img src="assets/img/XMG.webp" alt="Major XMG" loading="lazy"></span><span><b>Major XMG</b>HDS Division · The Art of Warfare</span></div>
+      <div class="sc">Scope witnessed: strategic analysis · structure review · recommendations</div>
+    </blockquote>
+    <div class="ref-more" data-rv>
+      <span><b>Need deeper verification?</b> Additional project context, full metrics and references are available on request.</span>
+      <a href="mailto:joeyinsync@gmail.com?subject=Reference%20request" data-cur="Write">Request references →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 · WRITING ══════════════════════════════════════════ -->
+<section class="wrap sec" data-chapter="05" data-chapter-name="Writing" id="writing" style="padding-top:0">
+  <div class="sec-hd"><span class="n">05</span><span class="t">Writing samples &amp; source documents</span><span class="ln"></span></div>
+  <p data-rv style="color:var(--text-2);max-width:56ch;margin-bottom:var(--s4);font-size:16px">I keep full community documents out of the public portfolio, but can send relevant examples for a role or project.</p>
+  <div class="samples" data-rv>
+    <article class="sample"><div class="k">Voice / campaigns</div><h4>Announcements &amp; launch writing</h4><p>Launch posts, recruitment copy, event announcements and community-facing updates written to sound like the community — not corporate filler.</p><a href="mailto:joeyinsync@gmail.com?subject=Writing%20sample%20request%20-%20Announcements" data-cur="Write">Request this sample</a></article>
+    <article class="sample"><div class="k">System / policy</div><h4>Rules, guides &amp; operations</h4><p>Governance, onboarding instructions, staff documentation, event playbooks and operational writing designed to be used under pressure.</p><a href="mailto:joeyinsync@gmail.com?subject=Writing%20sample%20request%20-%20Policy" data-cur="Write">Request this sample</a></article>
+    <article class="sample"><div class="k">World / lore</div><h4>Lore &amp; worldbuilding</h4><p>Long-form science fiction, setting documents and in-world material — alongside a completed SF novel of approximately 90,000 words and Cambridge C2 Grade A.</p><a href="mailto:joeyinsync@gmail.com?subject=Writing%20sample%20request%20-%20Worldbuilding" data-cur="Write">Request this sample</a></article>
+  </div>
+</section>
+
+</main>
+
+<a class="cnext" href="index.html#contact" data-cur="Write" data-to="Joey">
+  <span class="cnext-bg" aria-hidden="true"><img src="assets/img/aurora-static.webp" alt="" loading="lazy"></span>
+  <span class="cnext-in">
+    <span class="k">End of archive</span>
+    <h2>LET'S TALK</h2>
+    <span class="k" style="color:var(--text-2)">Best fit: roles where I can own the system behind the community — not only post into it.</span>
+    <span class="go">Open a line →</span>
+  </span>
+</a>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><span class="k">Archive</span>Seven years of community work. Built &amp; written by Joey.</div>
+      <div><span class="k">Doctrine</span>Analyze · Build · Sustain</div>
+      <div><span class="k">Index</span><a href="index.html" data-to="Joey">Home</a><br><a href="aurora.html" data-to="Project Aurora">Aurora</a><br><a href="crimson.html" data-to="Crimson Network">Crimson</a></div>
+      <div><span class="k">Notice</span><a href="privacy.html" data-to="Privacy">Privacy policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/lib/gsap.min.js"></script>
+<script src="assets/lib/ScrollTrigger.min.js"></script>
+<script src="assets/lib/lenis.min.js"></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

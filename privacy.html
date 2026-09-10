@@ -2,39 +2,110 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' ; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://joeyinsync.com; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy policy — Joey</title>
 <meta name="description" content="How Joey's portfolio handles website visits, contact enquiries and approved portfolio references.">
-<meta name="theme-color" content="#07090e">
+<link rel="canonical" href="https://joeyinsync.com/privacy.html">
+<meta name="theme-color" content="#04060a">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#07090e;color:#eef2f8;font:17px/1.75 system-ui,sans-serif}main{max-width:780px;margin:auto;padding:40px 24px 72px}a{color:#79ecd8;text-underline-offset:4px;overflow-wrap:anywhere}a:focus-visible{outline:2px solid #79ecd8;outline-offset:4px}nav a{display:inline-flex;align-items:center;min-height:44px}h1{font-size:clamp(2rem,7vw,3.4rem);line-height:1.15}h2{font-size:1.3rem;margin-top:2rem}.meta{color:#93a4bb;font-size:.9rem}li{margin-bottom:10px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/core.css">
+<link rel="stylesheet" href="assets/case.css">
+<link rel="stylesheet" href="assets/archive.css">
 </head>
 <body>
-<main>
-<nav aria-label="Return to portfolio"><a href="index.html">← Back to portfolio</a></nav>
-<h1>Privacy policy</h1>
-<p class="meta">Updated 7 September 2026</p>
-<p>This notice covers Joey's portfolio at joeyinsync.com. For questions about information you share with Joey or a privacy request, email <a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a>.</p>
-<h2>Visiting this portfolio</h2>
-<p>The portfolio has no account registration, contact forms, checkout, advertising trackers or visitor analytics added by Joey. Its own code does not set cookies or use browser storage to track you.</p>
-<p>GitHub Pages hosts the website. GitHub logs visitor IP addresses for security. Requests to deliver pages and assets also involve technical information such as browser/request details. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> for its processing and retention practices.</p>
-<p>The main portfolio and case-study pages load typefaces from Google Fonts. Your browser connects to Google to retrieve the font files, sending your IP address and request information. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>. The animation scripts are served with this website rather than from a third-party script CDN.</p>
-<h2>When you get in touch</h2>
-<p>If you email Joey, the information you choose to send—such as your email address, name, message and attachments—is processed to read and respond to your enquiry. Gmail provides the email service. Please share only information relevant to your enquiry, and avoid sending passwords or sensitive personal information.</p>
-<p>Responding to general enquiries relies on the legitimate interest in communicating with people who contact Joey. Where an enquiry concerns entering a contract with you, necessary processing may instead be based on taking steps at your request before a contract. Information needed to comply with a legal obligation is processed on that basis.</p>
-<p>Enquiry information is needed for handling the enquiry and any resulting relationship. Any further retention depends on outstanding follow-up, applicable legal recordkeeping duties or the need to establish or defend legal claims. You can ask about the information held about your enquiry and request deletion where applicable.</p>
-<h2>Portfolio references</h2>
-<p>Client-provided testimonials, display names and profile pictures are shown with permission. If your information appears here and you want to discuss its display or request removal, use the contact email above.</p>
-<h2>External services</h2>
-<p>LinkedIn, Fiverr, Upwork and other external destinations are links, not embedded widgets. Following a link takes you to a separate service whose privacy terms apply. Messages sent through those services are handled within their respective platforms. This notice does not cover another firm's invoicing or contracting activities.</p>
-<p>Hosting and communication providers may process information outside the European Economic Area. Their privacy notices explain the locations and safeguards they use, including applicable transfer mechanisms. Contact Joey for questions about providers involved in your enquiry.</p>
-<h2>Your rights</h2>
-<p>Depending on the circumstances, you may request access, correction, deletion, restriction or portability of your personal data, and object to processing based on legitimate interests. Where processing relies on consent, you can withdraw it without affecting earlier lawful processing. You may also complain to the <a href="https://dataprotection.gov.sk/">Office for Personal Data Protection of the Slovak Republic</a> or your local data protection authority.</p>
-<p>Contact <a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a> to make a request. No automated decisions with legal or similarly significant effects are made by this portfolio.</p>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="veil" id="veil" aria-hidden="true"><div class="veil-t" id="veilT"></div></div>
+<div class="cur" id="cur" aria-hidden="true"><span class="cur-lab" id="curLab"></span></div>
+<div class="cur-d" id="curD" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="index.html" data-to="Joey"><span class="dot" aria-hidden="true"></span><span class="mk">JOEY</span></a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="index.html#work" data-to="Joey">Work</a>
+    <a href="aurora.html" data-to="Project Aurora">Aurora</a>
+    <a href="crimson.html" data-to="Crimson Network">Crimson</a>
+    <a href="archive.html" data-to="The Archive">Archive</a>
+    <a href="index.html#contact" data-to="Joey">Contact</a>
+  </nav>
+  <span class="nav-stat">Doc <b>01</b></span>
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="index.html" data-to="Joey"><span class="n">←</span><span>Home</span><span class="x">↗</span></a>
+  <a href="aurora.html" data-to="Project Aurora"><span class="n">A</span><span>Aurora</span><span class="x">↗</span></a>
+  <a href="crimson.html" data-to="Crimson Network"><span class="n">B</span><span>Crimson</span><span class="x">↗</span></a>
+  <a href="archive.html" data-to="The Archive"><span class="n">△</span><span>Archive</span><span class="x">↗</span></a>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<header class="wrap ahero" style="padding-bottom:var(--s4)">
+  <a class="cback" href="index.html" data-to="Joey">← Back to portfolio</a>
+  <h1 style="font-size:clamp(42px,8.5vw,120px)">PRIVACY<br>POLICY</h1>
+  <p class="doc-meta" style="margin-top:var(--s3)">System documentation · Updated 7 September 2026</p>
+</header>
+
+<div class="wrap doc">
+  <nav class="doc-nav" aria-label="Sections">
+    <div class="k">Contents</div>
+    <a href="#visiting">01 · Visiting this portfolio</a>
+    <a href="#contact-you">02 · When you get in touch</a>
+    <a href="#refs">03 · Portfolio references</a>
+    <a href="#external">04 · External services</a>
+    <a href="#rights">05 · Your rights</a>
+  </nav>
+
+  <div class="doc-body">
+    <p>This notice covers Joey's portfolio at joeyinsync.com. For questions about information you share with Joey or a privacy request, email <a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a>.</p>
+
+    <h2 id="visiting"><span class="n">Section 01</span>Visiting this portfolio</h2>
+    <p>The portfolio has no account registration, contact forms, checkout, advertising trackers or visitor analytics added by Joey. Its own code does not set cookies or use browser storage to track you.</p>
+    <p>GitHub Pages hosts the website. GitHub logs visitor IP addresses for security. Requests to deliver pages and assets also involve technical information such as browser/request details. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> for its processing and retention practices.</p>
+    <p>Typefaces, stylesheets, scripts and animation libraries are all served from this website itself rather than from Google Fonts or any third-party CDN, so loading a page makes no request to another company on your behalf.</p>
+
+    <h2 id="contact-you"><span class="n">Section 02</span>When you get in touch</h2>
+    <p>If you email Joey, the information you choose to send—such as your email address, name, message and attachments—is processed to read and respond to your enquiry. Gmail provides the email service. Please share only information relevant to your enquiry, and avoid sending passwords or sensitive personal information.</p>
+    <p>Responding to general enquiries relies on the legitimate interest in communicating with people who contact Joey. Where an enquiry concerns entering a contract with you, necessary processing may instead be based on taking steps at your request before a contract. Information needed to comply with a legal obligation is processed on that basis.</p>
+    <p>Enquiry information is needed for handling the enquiry and any resulting relationship. Any further retention depends on outstanding follow-up, applicable legal recordkeeping duties or the need to establish or defend legal claims. You can ask about the information held about your enquiry and request deletion where applicable.</p>
+
+    <h2 id="refs"><span class="n">Section 03</span>Portfolio references</h2>
+    <p>Client-provided testimonials, display names and profile pictures are shown with permission. If your information appears here and you want to discuss its display or request removal, use the contact email above.</p>
+
+    <h2 id="external"><span class="n">Section 04</span>External services</h2>
+    <p>LinkedIn, Fiverr, Upwork and other external destinations are links, not embedded widgets. Following a link takes you to a separate service whose privacy terms apply. Messages sent through those services are handled within their respective platforms. This notice does not cover another firm's invoicing or contracting activities.</p>
+    <p>Hosting and communication providers may process information outside the European Economic Area. Their privacy notices explain the locations and safeguards they use, including applicable transfer mechanisms. Contact Joey for questions about providers involved in your enquiry.</p>
+
+    <h2 id="rights"><span class="n">Section 05</span>Your rights</h2>
+    <p>Depending on the circumstances, you may request access, correction, deletion, restriction or portability of your personal data, and object to processing based on legitimate interests. Where processing relies on consent, you can withdraw it without affecting earlier lawful processing. You may also complain to the <a href="https://dataprotection.gov.sk/">Office for Personal Data Protection of the Slovak Republic</a> or your local data protection authority.</p>
+    <p>Contact <a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a> to make a request. No automated decisions with legal or similarly significant effects are made by this portfolio.</p>
+  </div>
+</div>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><span class="k">Document</span>Privacy policy — updated 7 September 2026.</div>
+      <div><span class="k">Doctrine</span>Analyze · Build · Sustain</div>
+      <div><span class="k">Index</span><a href="index.html" data-to="Joey">Home</a><br><a href="archive.html" data-to="The Archive">Archive</a></div>
+      <div><span class="k">Contact</span><a href="mailto:joeyinsync@gmail.com">joeyinsync@gmail.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/lib/gsap.min.js"></script>
+<script src="assets/lib/ScrollTrigger.min.js"></script>
+<script src="assets/lib/lenis.min.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
