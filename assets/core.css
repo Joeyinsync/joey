@@ -212,15 +212,15 @@ body.menu .nav{z-index:calc(var(--z-menu) + 1);border-bottom-color:var(--line)}
   position:relative;z-index:1;display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:baseline;
   padding:18px 0;border-bottom:1px solid var(--line);
   font-family:var(--f-d);font-weight:600;font-size:clamp(28px,7vw,44px);letter-spacing:-.035em;
-  opacity:0;transform:translateY(28px);
-  transition:opacity 360ms var(--e-out),transform 520ms var(--e-out),border-color var(--t-comp);
+  opacity:1;transform:none;transition:border-color var(--t-comp);
 }
-body.menu .menu a{opacity:1;transform:none}
-body.menu .menu a:nth-child(1){transition-delay:.20s}
-body.menu .menu a:nth-child(2){transition-delay:.26s}
-body.menu .menu a:nth-child(3){transition-delay:.32s}
-body.menu .menu a:nth-child(4){transition-delay:.38s}
-body.menu .menu a:nth-child(5){transition-delay:.44s}
+@keyframes menuLinkIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+body.menu .menu a{animation:menuLinkIn 520ms var(--e-out) both}
+body.menu .menu a:nth-child(1){animation-delay:.20s}
+body.menu .menu a:nth-child(2){animation-delay:.26s}
+body.menu .menu a:nth-child(3){animation-delay:.32s}
+body.menu .menu a:nth-child(4){animation-delay:.38s}
+body.menu .menu a:nth-child(5){animation-delay:.44s}
 .menu a:hover,.menu a:focus-visible{border-color:var(--ac)}
 .menu a .n{font:500 11px/1 var(--f-m);letter-spacing:.14em;color:var(--ac)}
 .menu a .x{font:500 14px/1 var(--f-m);color:var(--text-3)}
