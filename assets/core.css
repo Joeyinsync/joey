@@ -192,25 +192,39 @@ body.menu .burger span::after{transform:translateY(-6px) rotate(-45deg)}
 @media(max-width:900px){.burger{display:grid}}
 
 .menu{
-  position:fixed;inset:0;z-index:var(--z-menu);background:var(--void-2);
-  display:flex;flex-direction:column;justify-content:center;padding:var(--nav-h) var(--gut) var(--s5);
-  clip-path:inset(0 0 100% 0);transition:clip-path 700ms var(--e-io);
+  position:fixed;inset:0;z-index:var(--z-menu);min-height:100vh;height:100dvh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:calc(var(--nav-h) + 32px) var(--gut) var(--s5);
+  background:linear-gradient(145deg,var(--void-2) 0%,#08121a 62%,var(--void) 100%);
+  overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-100%);
+  transition:transform 700ms var(--e-io),opacity 320ms var(--e-soft),visibility 0s linear 700ms;
+  will-change:transform,opacity;isolation:isolate;
 }
-body.menu .menu{clip-path:inset(0 0 0 0)}
+.menu::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 75% 55% at 78% 20%,rgba(var(--ac-rgb),.15),transparent 68%);
+  opacity:0;transform:scale(.92);transition:opacity 800ms var(--e-out),transform 900ms var(--e-out)}
+body.menu .menu{opacity:1;visibility:visible;pointer-events:auto;transform:none;
+  transition:transform 700ms var(--e-io),opacity 320ms var(--e-soft),visibility 0s}
+body.menu .menu::before{opacity:1;transform:none}
+body.menu .nav{z-index:calc(var(--z-menu) + 1);border-bottom-color:var(--line)}
 .menu a{
-  display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:baseline;
+  position:relative;z-index:1;display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:baseline;
   padding:18px 0;border-bottom:1px solid var(--line);
   font-family:var(--f-d);font-weight:600;font-size:clamp(28px,7vw,44px);letter-spacing:-.035em;
-  opacity:0;transform:translateY(24px);
+  opacity:0;transform:translateY(28px);
+  transition:opacity 360ms var(--e-out),transform 520ms var(--e-out),border-color var(--t-comp);
 }
-body.menu .menu a{opacity:1;transform:none;transition:opacity var(--t-comp) var(--e-out),transform var(--t-comp) var(--e-out)}
+body.menu .menu a{opacity:1;transform:none}
 body.menu .menu a:nth-child(1){transition-delay:.20s}
 body.menu .menu a:nth-child(2){transition-delay:.26s}
 body.menu .menu a:nth-child(3){transition-delay:.32s}
 body.menu .menu a:nth-child(4){transition-delay:.38s}
 body.menu .menu a:nth-child(5){transition-delay:.44s}
+.menu a:hover,.menu a:focus-visible{border-color:var(--ac)}
 .menu a .n{font:500 11px/1 var(--f-m);letter-spacing:.14em;color:var(--ac)}
 .menu a .x{font:500 14px/1 var(--f-m);color:var(--text-3)}
+@media(max-height:560px){.menu{justify-content:flex-start}.menu a{padding:13px 0;font-size:clamp(24px,6vw,34px)}}
 
 /* ═══ CHAPTER MARKER ═══ */
 .chap{

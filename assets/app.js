@@ -153,21 +153,28 @@
     var prog = $('#prog'), chap = $('#chap'), chapN = $('#chapN'), chapT = $('#chapT'), chapR = $('#chapR');
 
     if (burger && menu) {
-      burger.addEventListener('click', function () {
-        var open = document.body.classList.toggle('menu');
+      menu.setAttribute('aria-hidden', 'true');
+      function setMenu(open) {
+        document.body.classList.toggle('menu', open);
         document.body.classList.toggle('lock', open);
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+        menu.setAttribute('aria-hidden', open ? 'false' : 'true');
         if (lenis) open ? lenis.stop() : lenis.start();
+      }
+      burger.addEventListener('click', function () {
+        setMenu(!document.body.classList.contains('menu'));
       });
       $$('a', menu).forEach(function (a) {
         a.addEventListener('click', function () {
-          document.body.classList.remove('menu', 'lock');
-          burger.setAttribute('aria-expanded', 'false');
-          if (lenis) lenis.start();
+          setMenu(false);
         });
       });
       addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && document.body.classList.contains('menu')) burger.click();
+        if (e.key === 'Escape' && document.body.classList.contains('menu')) {
+          setMenu(false);
+          burger.focus();
+        }
       });
     }
 
