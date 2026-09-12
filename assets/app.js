@@ -155,7 +155,7 @@
     if (burger && menu) {
       menu.setAttribute('aria-hidden', 'true');
       function setMenu(open) {
-        document.body.classList.toggle('menu', open);
+        document.body.classList.toggle('menu-open', open);
         document.body.classList.toggle('lock', open);
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
@@ -163,7 +163,7 @@
         if (lenis) open ? lenis.stop() : lenis.start();
       }
       burger.addEventListener('click', function () {
-        setMenu(!document.body.classList.contains('menu'));
+        setMenu(!document.body.classList.contains('menu-open'));
       });
       $$('a', menu).forEach(function (a) {
         a.addEventListener('click', function () {
@@ -171,7 +171,7 @@
         });
       });
       addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && document.body.classList.contains('menu')) {
+        if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
           setMenu(false);
           burger.focus();
         }

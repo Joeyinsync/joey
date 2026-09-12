@@ -186,12 +186,13 @@ body.cur-on .cur,body.cur-on .cur-d{opacity:1}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:1px;
   background:var(--text);transition:transform var(--t-comp) var(--e-out)}
 .burger span::before{top:-6px}.burger span::after{top:6px}
-body.menu .burger span{background:transparent}
-body.menu .burger span::before{transform:translateY(6px) rotate(45deg)}
-body.menu .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+body.menu-open .burger span{background:transparent}
+body.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
 @media(max-width:900px){.burger{display:grid}}
 
-.menu{
+/* Keep the panel selector separate from the body's menu-open state. */
+nav.menu{
   position:fixed;inset:0;z-index:var(--z-menu);min-height:100vh;height:100dvh;
   display:flex;flex-direction:column;justify-content:center;
   padding:calc(var(--nav-h) + 32px) var(--gut) var(--s5);
@@ -201,30 +202,30 @@ body.menu .burger span::after{transform:translateY(-6px) rotate(-45deg)}
   transition:transform 700ms var(--e-io),opacity 320ms var(--e-soft),visibility 0s linear 700ms;
   will-change:transform,opacity;isolation:isolate;
 }
-.menu::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+nav.menu::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:radial-gradient(ellipse 75% 55% at 78% 20%,rgba(var(--ac-rgb),.15),transparent 68%);
   opacity:0;transform:scale(.92);transition:opacity 800ms var(--e-out),transform 900ms var(--e-out)}
-body.menu .menu{opacity:1;visibility:visible;pointer-events:auto;transform:none;
+body.menu-open nav.menu{opacity:1;visibility:visible;pointer-events:auto;transform:none;
   transition:transform 700ms var(--e-io),opacity 320ms var(--e-soft),visibility 0s}
-body.menu .menu::before{opacity:1;transform:none}
-body.menu .nav{z-index:calc(var(--z-menu) + 1);border-bottom-color:var(--line)}
-.menu a{
+body.menu-open nav.menu::before{opacity:1;transform:none}
+body.menu-open .nav{z-index:calc(var(--z-menu) + 1);border-bottom-color:var(--line)}
+nav.menu a{
   position:relative;z-index:1;display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:baseline;
   padding:18px 0;border-bottom:1px solid var(--line);
   font-family:var(--f-d);font-weight:600;font-size:clamp(28px,7vw,44px);letter-spacing:-.035em;
   opacity:1;transform:none;transition:border-color var(--t-comp);
 }
 @keyframes menuLinkIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-body.menu .menu a{animation:menuLinkIn 520ms var(--e-out) both}
-body.menu .menu a:nth-child(1){animation-delay:.20s}
-body.menu .menu a:nth-child(2){animation-delay:.26s}
-body.menu .menu a:nth-child(3){animation-delay:.32s}
-body.menu .menu a:nth-child(4){animation-delay:.38s}
-body.menu .menu a:nth-child(5){animation-delay:.44s}
-.menu a:hover,.menu a:focus-visible{border-color:var(--ac)}
-.menu a .n{font:500 11px/1 var(--f-m);letter-spacing:.14em;color:var(--ac)}
-.menu a .x{font:500 14px/1 var(--f-m);color:var(--text-3)}
-@media(max-height:560px){.menu{justify-content:flex-start}.menu a{padding:13px 0;font-size:clamp(24px,6vw,34px)}}
+body.menu-open nav.menu a{animation:menuLinkIn 520ms var(--e-out) both}
+body.menu-open nav.menu a:nth-child(1){animation-delay:.20s}
+body.menu-open nav.menu a:nth-child(2){animation-delay:.26s}
+body.menu-open nav.menu a:nth-child(3){animation-delay:.32s}
+body.menu-open nav.menu a:nth-child(4){animation-delay:.38s}
+body.menu-open nav.menu a:nth-child(5){animation-delay:.44s}
+nav.menu a:hover,nav.menu a:focus-visible{border-color:var(--ac)}
+nav.menu a .n{font:500 11px/1 var(--f-m);letter-spacing:.14em;color:var(--ac)}
+nav.menu a .x{font:500 14px/1 var(--f-m);color:var(--text-3)}
+@media(max-height:560px){nav.menu{justify-content:flex-start}nav.menu a{padding:13px 0;font-size:clamp(24px,6vw,34px)}}
 
 /* ═══ CHAPTER MARKER ═══ */
 .chap{
