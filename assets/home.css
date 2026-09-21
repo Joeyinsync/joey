@@ -288,3 +288,54 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
   .chip,.own-tog button{padding:14px 18px}
   .sc-arrow{width:46px;height:44px}
 }
+
+/* ═══ SOCIALS · PROOF OF ACTIVITY ════════════════════════════ */
+.socials{position:relative;padding-block:var(--s7);border-top:1px solid var(--line)}
+.socials::before{content:"";position:absolute;inset:8% -10% auto 46%;height:70%;z-index:-1;
+  background:radial-gradient(ellipse at 50% 35%,rgba(var(--ac-rgb),.09),transparent 68%);
+  pointer-events:none}
+.socials-head{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.45fr);
+  align-items:end;gap:var(--s5);margin-bottom:var(--s5)}
+.socials-head .big{font-size:clamp(42px,7.2vw,112px)}
+.socials-head .ed{color:var(--ac)}
+.socials-head p{max-width:430px;font:400 15px/1.75 var(--f-m);color:var(--text-2)}
+.social-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);
+  border-left:1px solid var(--line)}
+.social-card{position:relative;min-height:156px;padding:24px;display:grid;
+  grid-template-columns:48px 1fr auto;align-items:end;gap:18px;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:linear-gradient(145deg,rgba(17,23,34,.56),rgba(7,10,16,.22));
+  overflow:hidden;transition:background var(--t-comp),border-color var(--t-comp),transform var(--t-comp) var(--e-out)}
+.social-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(var(--ac-rgb),.12),transparent 54%);
+  opacity:0;transition:opacity var(--t-comp)}
+.social-card:hover,.social-card:focus-visible{background:var(--surface);border-color:rgba(var(--ac-rgb),.48);transform:translateY(-4px)}
+.social-card:hover::before,.social-card:focus-visible::before{opacity:1}
+.social-card.service{background:linear-gradient(145deg,rgba(var(--ac-rgb),.08),rgba(7,10,16,.3))}
+.social-icon{position:relative;z-index:1;width:48px;height:48px;border:1px solid var(--line-2);border-radius:12px;
+  display:grid;place-items:center;color:var(--ac);background:rgba(4,6,10,.5);
+  transition:border-color var(--t-comp),box-shadow var(--t-comp),transform var(--t-comp) var(--e-out)}
+.social-icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.social-icon svg .fill{fill:currentColor;stroke:none}
+.social-letter{font:700 20px/1 var(--f-d);letter-spacing:-.07em;text-transform:lowercase}
+.social-letter.compact{font-size:16px;letter-spacing:-.04em}
+.social-card:hover .social-icon,.social-card:focus-visible .social-icon{border-color:var(--ac);box-shadow:0 0 24px rgba(var(--ac-rgb),.15);transform:scale(1.04)}
+.social-copy{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.social-copy strong{font:600 17px/1.1 var(--f-d);letter-spacing:-.02em;color:var(--text)}
+.social-copy small{font:400 10px/1.45 var(--f-m);letter-spacing:.07em;text-transform:uppercase;color:var(--text-3)}
+.social-go{position:relative;z-index:1;align-self:start;font:400 18px/1 var(--f-m);color:var(--text-3);
+  transition:color var(--t-comp),transform var(--t-comp) var(--e-out)}
+.social-card:hover .social-go,.social-card:focus-visible .social-go{color:var(--ac);transform:translate(3px,-3px)}
+.foot.has-social{grid-template-columns:2fr 1fr 1fr 1.15fr 1fr}
+.foot-socials{display:flex;flex-wrap:wrap;gap:7px}
+.foot-socials a{width:38px;min-height:38px!important;justify-content:center;border:1px solid var(--line);
+  border-radius:8px;font:600 9px/1 var(--f-m);letter-spacing:.04em;color:var(--text-2);
+  transition:color var(--t-comp),border-color var(--t-comp),background var(--t-comp)}
+.foot-socials a:hover,.foot-socials a:focus-visible{color:var(--void);border-color:var(--ac);background:var(--ac)}
+@media(max-width:1000px){.social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .socials-head{grid-template-columns:1fr;gap:var(--s3)}
+  .foot.has-social{grid-template-columns:repeat(2,1fr)}
+  .foot.has-social>div:last-child{grid-column:1/-1;border-right:0}}
+@media(max-width:560px){.socials{padding-block:var(--s6)}.social-grid{grid-template-columns:1fr}
+  .social-card{min-height:128px;padding:20px}.socials-head .big{font-size:clamp(40px,13vw,62px)}
+  .foot.has-social{grid-template-columns:1fr}.foot.has-social>div{border-right:0}
+  .foot.has-social>div:last-child{grid-column:auto}}
