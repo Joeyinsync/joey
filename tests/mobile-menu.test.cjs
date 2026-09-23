@@ -13,7 +13,7 @@ const start = app.indexOf('    var nav =');
 const end = app.indexOf('    var secs =', start);
 assert(start >= 0 && end > start, 'Shared menu controller must be present');
 const controller = app.slice(start, end);
-const pages = ['index.html', 'aurora.html', 'crimson.html', 'archive.html', 'privacy.html'];
+const pages = ['index.html', 'aurora.html', 'crimson.html', 'site202.html', 'archive.html', 'privacy.html', 'imprint.html'];
 
 function element(classNames = '') {
   const classes = new Set(classNames.split(/\s+/).filter(Boolean));
