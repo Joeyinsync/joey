@@ -892,4 +892,26 @@
     apply();
   })();
 
+
+  (function inviewVideo() {
+    var vids = $$('video[data-inview]');
+    if (!vids.length) return;
+    if (reduced || !('IntersectionObserver' in window)) return;   // poster only
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (v.preload === 'none') v.preload = 'auto';
+          var pr = v.play();
+          if (pr && pr.catch) pr.catch(function () {});   // autoplay refusal is fine
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+
 })();

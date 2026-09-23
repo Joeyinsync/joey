@@ -290,7 +290,7 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
 }
 
 /* ═══ SOCIALS · PROOF OF ACTIVITY ════════════════════════════ */
-.socials{position:relative;padding-block:var(--s7);border-top:1px solid var(--line)}
+.socials{position:relative;padding-block:var(--s7);border-top:1px solid var(--line);overflow-x:clip}
 .socials::before{content:"";position:absolute;inset:8% -10% auto 46%;height:70%;z-index:-1;
   background:radial-gradient(ellipse at 50% 35%,rgba(var(--ac-rgb),.09),transparent 68%);
   pointer-events:none}
@@ -339,3 +339,8 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
   .social-card{min-height:128px;padding:20px}.socials-head .big{font-size:clamp(40px,13vw,62px)}
   .foot.has-social{grid-template-columns:1fr}.foot.has-social>div{border-right:0}
   .foot.has-social>div:last-child{grid-column:auto}}
+
+/* third portal spans the row */
+.portal.wide{grid-column:1/-1;min-height:clamp(340px,44vh,460px)}
+.portal.wide .portal-in{max-width:min(100%,780px)}
+@media(max-width:900px){.portal.wide{min-height:400px}}
