@@ -1,0 +1,27 @@
+{
+  "enabledPlugins": {
+    "youtube-agent@youtube-agent-skill": true,
+    "instagram-agent@instagram-agent-skill": true,
+    "tiktok-skills@tiktok-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "youtube-agent-skill": {
+      "source": {
+        "source": "github",
+        "repo": "Jakeschincariol/youtube-agent-skill"
+      }
+    },
+    "instagram-agent-skill": {
+      "source": {
+        "source": "github",
+        "repo": "Jakeschincariol/instagram-agent-skill"
+      }
+    },
+    "tiktok-skills": {
+      "source": {
+        "source": "github",
+        "repo": "sergebulaev/tiktok-skills"
+      }
+    }
+  }
+}
