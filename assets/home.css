@@ -10,6 +10,7 @@
   content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
     linear-gradient(to top,var(--void) 2%,rgba(4,6,10,.25) 32%,transparent 60%),
+    linear-gradient(to bottom,rgba(4,6,10,.82) 0,rgba(4,6,10,.45) 90px,transparent 190px),
     linear-gradient(to right,rgba(4,6,10,.65),transparent 45%);
 }
 .hero-in{position:relative;z-index:2;height:100%;max-width:var(--max);margin-inline:auto;
@@ -372,3 +373,10 @@ body.ready .hero-pfp{opacity:1;transform:none}
 .close-art img{display:block;width:100%;height:auto;opacity:.34;filter:saturate(1.05)}
 @media(max-width:900px){.close-art{width:100%}
   .close-art img{opacity:.22}}
+
+/* ═══ HERO CTA ═══════════════════════════════════════════════ */
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--s3)}
+.hero-cta .btn{padding:15px 22px}
+@media(max-width:520px){.hero-cta .btn{flex:1 1 auto;justify-content:center}}
+/* the Mikey reference sits under the work portals */
+#work .lref{margin-top:var(--s4)}

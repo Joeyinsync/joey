@@ -76,10 +76,15 @@
     if (reduced) { pre.remove(); document.body.classList.add('ready');
                    if (window.__fieldReveal) window.__fieldReveal(); return; }
 
+    /* the boot sequence plays once per visit; returning in the same session goes straight in */
+    var seen = false;
+    try { seen = sessionStorage.getItem('joey-boot') === '1'; sessionStorage.setItem('joey-boot', '1'); } catch (e) {}
+    if (seen) { finish(); return; }
+
     var lines = [
       'BOOT / interface',
       'LOAD / typefaces + field',
-      'INDEX / 6 communities · 7 years',
+      'INDEX / 7 communities · 7 years',
       'LINK / case archive',
       'JOEY ONLINE'
     ];
@@ -100,9 +105,9 @@
       if (pct) pct.textContent = String(Math.round(p)).padStart(3, '0');
       if (i >= lines.length && p >= 100) {
         clearInterval(step);
-        setTimeout(finish, 340);
+        setTimeout(finish, 200);
       }
-    }, 190);
+    }, 120);
   })();
 
   /* ─────────────────────────────────────────────
