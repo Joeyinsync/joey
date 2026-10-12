@@ -89,9 +89,10 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
 /* ═══ 02 · SIGNAL ════════════════════════════════════════════ */
 .signal{border-block:1px solid var(--line);padding-block:0;background:var(--void-2)}
 .sig-grid{display:grid;grid-template-columns:repeat(5,1fr)}
-.sig{padding:var(--s5) var(--s3) var(--s5) 0;border-right:1px solid var(--line);position:relative;
+.sig{padding:var(--s5) var(--s3);border-right:1px solid var(--line);position:relative;
   overflow:hidden;transition:background var(--t-comp)}
 .sig:last-child{border-right:0}
+.sig:first-child{padding-left:0}
 .sig::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--ac);
   transform:scaleX(0);transform-origin:left;transition:transform 700ms var(--e-out)}
 .sig:hover::before{transform:scaleX(1)}
@@ -103,10 +104,11 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
 .sig .s{font:400 11.5px/1.45 var(--f-m);color:var(--text-3);max-width:23ch}
 @media(max-width:1000px){.sig-grid{grid-template-columns:repeat(2,1fr)}
   .sig{border-bottom:1px solid var(--line);padding-right:var(--s3)}
+  .sig:nth-child(2n+1){padding-left:0}
   .sig:nth-child(2n){border-right:0}
   .sig:last-child{grid-column:span 2;border-bottom:0}}
 @media(max-width:560px){.sig-grid{grid-template-columns:1fr}
-  .sig,.sig:nth-child(2n){border-right:0}.sig:last-child{grid-column:auto}}
+  .sig,.sig:nth-child(2n){border-right:0;padding-left:0}.sig:last-child{grid-column:auto}}
 
 /* ═══ 03 · DISCIPLINE (interactive capability list) ══════════ */
 .disc-list{border-top:1px solid var(--line)}
