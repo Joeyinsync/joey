@@ -367,3 +367,45 @@ body:not([data-ac]) .ref{border-left:0;padding-left:calc(var(--s3) + 2px);
 body:not([data-ac]) .net-shell{background:
   radial-gradient(ellipse 50% 55% at 38% 50%,rgba(var(--pu-rgb),.07),transparent 70%),
   radial-gradient(ellipse 50% 55% at 62% 50%,rgba(var(--bc-rgb),.06),transparent 70%),var(--void-2)}
+
+/* archive: scope, more, growth, samples, records */
+body:not([data-ac]) :is(.scope-c .k,.spec-c .k,.sample .k,.smore .code,.sample a,.ref-more a,.smore .big,.rec-row.on h3){
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent}
+body:not([data-ac]) .scope-c{position:relative;transition:background var(--t-comp)}
+body:not([data-ac]) .scope-c::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);
+  box-shadow:0 0 14px rgba(var(--pu-rgb),.55);transform:scaleX(0);transform-origin:left;transition:transform 700ms var(--e-out)}
+body:not([data-ac]) .scope-c:hover::before{transform:scaleX(1)}
+body:not([data-ac]) :is(.scope-c,.spec-c,.sample):hover{background:
+  radial-gradient(ellipse 80% 70% at 0% 0%,rgba(var(--pu-rgb),.09),transparent 60%),
+  radial-gradient(ellipse 80% 70% at 100% 100%,rgba(var(--bc-rgb),.07),transparent 60%),var(--surface)}
+body:not([data-ac]) :is(.cloud span,.voice-chips span,.chip):hover{color:var(--text);border-color:transparent;
+  background:linear-gradient(var(--void),var(--void)) padding-box,var(--grad) border-box;
+  box-shadow:0 0 16px -4px rgba(var(--pu-rgb),.6)}
+body:not([data-ac]) .chip[aria-pressed="true"]:hover{background:var(--grad);color:var(--void)}
+body:not([data-ac]) .smore{border:1px solid transparent;
+  background:linear-gradient(var(--void-2),var(--void-2)) padding-box,var(--grad) border-box;
+  box-shadow:0 0 40px -12px rgba(var(--pu-rgb),.55),0 0 40px -16px rgba(var(--bc-rgb),.5)}
+body:not([data-ac]) .sample::before{background:var(--grad);box-shadow:0 0 14px rgba(var(--pu-rgb),.55)}
+body:not([data-ac]) .rec-row::before{background:linear-gradient(90deg,rgba(var(--pu-rgb),.08),rgba(var(--bc-rgb),.05) 60%,transparent)}
+
+/* Mikey owned both Aurora and Crimson: his reference wears both colours */
+.mikey{--duo:linear-gradient(180deg,var(--cr),var(--cy))}
+html body .ref.mikey{border-left:0;padding-left:calc(var(--s3) + 2px);background:var(--duo) left top/2px 100% no-repeat}
+.lref.mikey{border-left-color:transparent;
+  background:var(--duo) left top/2px 100% no-repeat,var(--void-2)}
+.lref.mikey::after{background:
+  radial-gradient(ellipse at 85% 15%,rgba(var(--cr-rgb),.10),transparent 60%),
+  radial-gradient(ellipse at 60% 90%,rgba(var(--cy-rgb),.08),transparent 60%)}
+html body .mikey .k{background:linear-gradient(90deg,var(--cr),var(--cy));-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;text-shadow:none!important}
+.mikey .q .mk:first-child{color:var(--cr)}
+.mikey .q .mk:last-child{color:var(--cy)}
+html body .mikey .av{border-color:rgba(var(--cr-rgb),.5);box-shadow:0 0 0 1px rgba(var(--cy-rgb),.25)}
+
+/* end-of-page link in brand colours */
+.cnext.brand .cnext-bg img{filter:saturate(1.05) brightness(.62);opacity:.55}
+.cnext.brand:hover .cnext-bg img{filter:saturate(1.15) brightness(.75);opacity:.75}
+.cnext.brand h2{text-shadow:0 0 40px rgba(var(--pu-rgb),.35)}
+.cnext.brand .go{background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent}
