@@ -380,3 +380,6 @@ body.ready .hero-pfp{opacity:1;transform:none}
 @media(max-width:520px){.hero-cta .btn{flex:1 1 auto;justify-content:center}}
 /* the Mikey reference sits under the work portals */
 #work .lref{margin-top:var(--s4)}
+/* seven profile cards: the last one spans two columns so the grid stays closed */
+.social-grid .social-card:last-child:nth-child(7){grid-column:span 2}
+@media(max-width:560px){.social-grid .social-card:last-child:nth-child(7){grid-column:auto}}
