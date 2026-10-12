@@ -22,12 +22,17 @@
   --text-3:#6d7f95;
 
   /* ── signal ── */
-  --field-rgb:22,224,192;
+  --field-rgb:34,200,255;  --field2-rgb:180,77,255;
+  /* brand · Joey in Sync — neon cat: violet → blue → cyan */
+  --pu:#b44dff;   --pu-rgb:180,77,255;   --bl:#4c7cfb;
+  --bc:#22c8ff;   --bc-2:#7ad9ff;  --bc-dim:#0a4a66;  --bc-rgb:34,200,255;
+  --grad:linear-gradient(100deg,var(--pu) 0%,var(--bl) 50%,var(--bc) 100%);
+  /* aurora teal — Project Aurora keeps its own colour */
   --cy:#16e0c0;   --cy-2:#5cf0d8;  --cy-dim:#0b5f52;  --cy-rgb:22,224,192;
   --cr:#ff5136;   --cr-2:#ff8069;  --cr-dim:#6e1d12;  --cr-rgb:255,81,54;
   --gs:#fe762b;   --gs-2:#ff9b62;  --gs-dim:#6b2c0b;  --gs-rgb:254,118,43;
 
-  --ac:var(--cy); --ac-2:var(--cy-2); --ac-dim:var(--cy-dim); --ac-rgb:var(--cy-rgb);
+  --ac:var(--bc); --ac-2:var(--bc-2); --ac-dim:var(--bc-dim); --ac-rgb:var(--bc-rgb);
 
   /* ── type ── */
   --f-d:"Geist",-apple-system,system-ui,sans-serif;
@@ -52,6 +57,7 @@
   --z-grain:2; --z-nav:60; --z-chap:55; --z-menu:70; --z-cursor:9999; --z-pre:9000; --z-veil:8000;
 }
 
+[data-ac="cyan"],[data-ac="aurora"]{--ac:var(--cy);--ac-2:var(--cy-2);--ac-dim:var(--cy-dim);--ac-rgb:var(--cy-rgb)}
 [data-ac="crimson"]{--ac:var(--cr);--ac-2:var(--cr-2);--ac-dim:var(--cr-dim);--ac-rgb:var(--cr-rgb)}
 [data-ac="guildstew"]{--ac:var(--gs);--ac-2:var(--gs-2);--ac-dim:var(--gs-dim);--ac-rgb:var(--gs-rgb)}
 
@@ -165,9 +171,10 @@ body.cur-on .cur,body.cur-on .cur-d{opacity:1}
 }
 .nav.solid{background:rgba(7,10,16,.72);backdrop-filter:blur(18px) saturate(1.3);border-bottom-color:var(--line)}
 .nav-brand{display:flex;align-items:center;gap:12px;font:600 14px/1 var(--f-d);letter-spacing:-.02em}
-.nav-brand .dot{width:6px;height:6px;border-radius:50%;background:var(--ac);flex:none;
-  box-shadow:0 0 10px var(--ac);animation:pulse 2.6s var(--e-soft) infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.nav-brand .logo{width:26px;height:26px;flex:none;display:block;
+  filter:drop-shadow(-2px 0 6px rgba(var(--pu-rgb),.45)) drop-shadow(2px 0 7px rgba(var(--bc-rgb),.4));
+  transition:transform var(--t-comp) var(--e-out)}
+.nav-brand:hover .logo{transform:rotate(-7deg) scale(1.08)}
 .nav-brand .mk{opacity:0;transform:translateY(6px);transition:opacity var(--t-comp),transform var(--t-comp)}
 .nav.solid .nav-brand .mk{opacity:1;transform:none}
 .nav-links{display:flex;align-items:center;gap:var(--s3)}
@@ -301,3 +308,22 @@ footer{border-top:1px solid var(--line);position:relative;z-index:3;background:v
   .ln-mask>span{transform:none!important}
   .cur,.cur-d{display:none!important}
 }
+
+/* ═══ BRAND · JOEY IN SYNC ═══════════════════════════════════
+   Pages without a project colour (no data-ac on body) wear the
+   brand: violet → cyan neon, used on accents only.            */
+.grad-t{background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent}
+body:not([data-ac]) :is(.hero-lede em,.close-big em,.ident-stmt .acc,.sig .v i,.chero .sub em,.ahero .sub em,.ccta h2 em){
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  padding-inline:.05em .12em;margin-inline:-.05em -.12em;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
+body:not([data-ac]) .prog{background:var(--grad);box-shadow:0 0 12px rgba(var(--pu-rgb),.5)}
+body:not([data-ac]) .btn.pri{background:var(--grad);border-color:transparent;
+  box-shadow:0 10px 34px -12px rgba(var(--pu-rgb),.6),0 10px 34px -14px rgba(var(--bc-rgb),.6)}
+body:not([data-ac]) .btn.pri:hover{border-color:var(--text)}
+body:not([data-ac]) .pre-bar i{background:var(--grad)}
+.pre-mk{display:block;width:58px;height:auto;margin-bottom:var(--s3);
+  filter:drop-shadow(0 0 14px rgba(var(--pu-rgb),.35));animation:mk-glow 2.4s var(--e-soft) infinite alternate}
+@keyframes mk-glow{to{filter:drop-shadow(0 0 22px rgba(var(--bc-rgb),.5))}}

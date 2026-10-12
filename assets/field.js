@@ -18,9 +18,9 @@
 
   if (!gl) {
     cv.style.background =
-      'radial-gradient(ellipse 80% 50% at 34% 30%, rgba(22,224,192,.26), transparent 62%),' +
-      'radial-gradient(ellipse 60% 40% at 74% 22%, rgba(22,224,192,.14), transparent 66%),' +
-      'linear-gradient(180deg,#07161c 0%,#04060a 76%)';
+      'radial-gradient(ellipse 80% 50% at 30% 30%, rgba(180,77,255,.24), transparent 62%),' +
+      'radial-gradient(ellipse 60% 40% at 74% 22%, rgba(34,200,255,.18), transparent 66%),' +
+      'linear-gradient(180deg,#0a0b1e 0%,#04060a 76%)';
     return;
   }
 
@@ -34,6 +34,7 @@
   F.push('uniform float u_scroll;');
   F.push('uniform float u_in;');
   F.push('uniform vec3 u_ac;');
+  F.push('uniform vec3 u_ac2;');
 
   F.push('float hash(vec2 p){');
   F.push('  p=fract(p*vec2(233.34,851.73));');
@@ -88,9 +89,11 @@
   F.push('  float a2=curtain(uv,t, 5.3,0.99,0.17,0.22);');
   F.push('  float a3=curtain(uv,t,12.9,0.79,0.27,0.36);');
 
-  F.push('  vec3 core=u_ac;');
-  F.push('  vec3 hot =mix(u_ac,vec3(0.82,1.0,0.98),0.70);');
-  F.push('  vec3 cool=mix(u_ac,vec3(0.20,0.36,0.92),0.45);');
+  /* two-tone curtains: violet on the left drifting to cyan on the right */
+  F.push('  float hue=smoothstep(0.08,0.92,uv.x+(a3-0.3)*0.18);');
+  F.push('  vec3 core=mix(u_ac2,u_ac,hue);');
+  F.push('  vec3 hot =mix(core,vec3(0.86,0.96,1.0),0.62);');
+  F.push('  vec3 cool=mix(core,vec3(0.28,0.30,0.95),0.45);');
 
   F.push('  vec3 col=vec3(0.0);');
   F.push('  col+=mix(core,hot ,clamp(a1,0.0,1.0))*a1*0.98;');
@@ -105,7 +108,7 @@
   F.push('  col+=vec3(step(0.9988,st))*0.75;');
 
   /* deep blue-black ground, never flat black */
-  F.push('  col+=mix(vec3(0.013,0.019,0.033),vec3(0.020,0.052,0.068),smoothstep(0.10,1.0,uv.y));');
+  F.push('  col+=mix(vec3(0.013,0.016,0.036),mix(vec3(0.040,0.024,0.078),vec3(0.018,0.046,0.078),uv.x),smoothstep(0.10,1.0,uv.y));');
 
   /* keep the lower band clear so the name reads */
   /* portrait viewports crop the field to a narrow slice, so the same
@@ -152,20 +155,24 @@
     t: gl.getUniformLocation(prog, 'u_t'),
     scroll: gl.getUniformLocation(prog, 'u_scroll'),
     intro: gl.getUniformLocation(prog, 'u_in'),
-    ac: gl.getUniformLocation(prog, 'u_ac')
+    ac: gl.getUniformLocation(prog, 'u_ac'),
+    ac2: gl.getUniformLocation(prog, 'u_ac2')
   };
 
   /* accent comes from CSS so a crimson page tints its own field */
-  var accent = [0.086, 0.878, 0.753];
-  try {
-    var raw = getComputedStyle(document.documentElement).getPropertyValue('--field-rgb').trim();
-    if (raw) {
+  function cssRGB(name, fallback) {
+    try {
+      var raw = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
       var n = raw.split(',').map(Number);
       if (n.length === 3 && n.every(function (v) { return !isNaN(v); }))
-        accent = [n[0] / 255, n[1] / 255, n[2] / 255];
-    }
-  } catch (e) {}
+        return [n[0] / 255, n[1] / 255, n[2] / 255];
+    } catch (e) {}
+    return fallback;
+  }
+  var accent = cssRGB('--field-rgb', [0.133, 0.784, 1.0]);
+  var accent2 = cssRGB('--field2-rgb', accent);
   gl.uniform3f(U.ac, accent[0], accent[1], accent[2]);
+  gl.uniform3f(U.ac2, accent2[0], accent2[1], accent2[2]);
 
   var SCALE = 0.62, w = 0, h = 0;
   function resize() {

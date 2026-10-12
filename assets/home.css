@@ -346,3 +346,24 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
 .portal.wide{grid-column:1/-1;min-height:clamp(340px,44vh,460px)}
 .portal.wide .portal-in{max-width:min(100%,780px)}
 @media(max-width:900px){.portal.wide{min-height:400px}}
+
+/* ═══ BRAND · MASCOT ════════════════════════════════════════ */
+.hero-pfp{position:absolute;z-index:2;right:var(--gut);top:calc(var(--nav-h) + clamp(84px,15vh,170px));
+  width:clamp(210px,22vw,350px);pointer-events:none;
+  opacity:0;transform:translateY(24px) scale(.96);
+  transition:opacity 1.3s .45s var(--e-out),transform 1.5s .45s var(--e-out)}
+body.ready .hero-pfp{opacity:1;transform:none}
+.hero-pfp img{display:block;width:100%;height:auto;
+  filter:drop-shadow(-14px 0 38px rgba(var(--pu-rgb),.32)) drop-shadow(14px 0 44px rgba(var(--bc-rgb),.26));
+  animation:pfp-float 7s var(--e-soft) infinite alternate}
+@keyframes pfp-float{to{transform:translateY(-12px)}}
+@media(max-width:900px){.hero-pfp{width:clamp(120px,30vw,200px);top:calc(var(--nav-h) + clamp(96px,14vh,140px))}}
+@media(max-height:620px) and (min-width:901px){.hero-pfp{width:clamp(160px,16vw,240px);top:calc(var(--nav-h) + 60px)}}
+
+.close-art{position:absolute;z-index:-1;right:0;bottom:0;width:min(52%,720px);pointer-events:none;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 62%),linear-gradient(to top,transparent 0,#000 38%);
+  mask-image:linear-gradient(to right,transparent 0,#000 62%),linear-gradient(to top,transparent 0,#000 38%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.close-art img{display:block;width:100%;height:auto;opacity:.34;filter:saturate(1.05)}
+@media(max-width:900px){.close-art{width:100%}
+  .close-art img{opacity:.22}}

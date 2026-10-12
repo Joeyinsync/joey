@@ -395,6 +395,9 @@
         c: 'Track what keeps people active, listen to member behaviour, adjust structure and turn partnerships into compounding long-term growth.' }
     ];
 
+    var css = getComputedStyle(document.documentElement);
+    var AC = (css.getPropertyValue('--bc-rgb') || '').trim() || '34,200,255';   // brand cyan
+    var PU = (css.getPropertyValue('--pu-rgb') || '').trim() || '180,77,255';   // brand violet
     var W = 0, H = 0, dpr = 1, hubs = [], motes = [], core = null;
     var mx = -9999, my = -9999, hover = -1, locked = -1, t = 0, raf = 0, visible = true;
 
@@ -489,7 +492,7 @@
         var mxp = (h.x + core.x) / 2 + Math.sin(t + i) * 10;
         var myp = (h.y + core.y) / 2 + Math.cos(t + i) * 10;
         ctx.quadraticCurveTo(mxp, myp, core.x, core.y);
-        ctx.strokeStyle = 'rgba(22,224,192,' + (0.10 + g * 0.55) + ')';
+        ctx.strokeStyle = 'rgba(' + AC + ',' + (0.10 + g * 0.55) + ')';
         ctx.lineWidth = 1 + g * 1.3;
         ctx.stroke();
       });
@@ -502,7 +505,7 @@
         ctx.beginPath();
         ctx.moveTo(m.x, m.y);
         ctx.lineTo(h.x, h.y);
-        ctx.strokeStyle = 'rgba(22,224,192,' + (0.055 + g * 0.20) + ')';
+        ctx.strokeStyle = 'rgba(' + PU + ',' + (0.07 + g * 0.22) + ')';
         ctx.stroke();
       });
 
@@ -518,13 +521,14 @@
       // core
       var pulse = 1 + Math.sin(t * 2.1) * 0.06;
       var cg = ctx.createRadialGradient(core.x, core.y, 0, core.x, core.y, 62 * pulse);
-      cg.addColorStop(0, 'rgba(22,224,192,.30)');
-      cg.addColorStop(1, 'rgba(22,224,192,0)');
+      cg.addColorStop(0, 'rgba(' + PU + ',.34)');
+      cg.addColorStop(0.55, 'rgba(' + AC + ',.12)');
+      cg.addColorStop(1, 'rgba(' + AC + ',0)');
       ctx.fillStyle = cg;
       ctx.beginPath(); ctx.arc(core.x, core.y, 62 * pulse, 0, 6.2832); ctx.fill();
 
       ctx.beginPath(); ctx.arc(core.x, core.y, 7.5, 0, 6.2832);
-      ctx.fillStyle = '#16e0c0'; ctx.fill();
+      ctx.fillStyle = 'rgb(' + AC + ')'; ctx.fill();
       ctx.font = '500 9px "Geist Mono", monospace';
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.fillStyle = 'rgba(238,242,248,.86)';
@@ -534,11 +538,11 @@
       hubs.forEach(function (h, i) {
         var g = h.glow;
         ctx.beginPath(); ctx.arc(h.x, h.y, 4.5 + g * 2.6, 0, 6.2832);
-        ctx.fillStyle = g > 0.05 ? '#16e0c0' : 'rgba(147,163,184,.72)';
+        ctx.fillStyle = g > 0.05 ? 'rgb(' + AC + ')' : 'rgba(147,163,184,.72)';
         ctx.fill();
         if (g > 0.02) {
           ctx.beginPath(); ctx.arc(h.x, h.y, 15 + g * 12, 0, 6.2832);
-          ctx.strokeStyle = 'rgba(22,224,192,' + g * 0.45 + ')';
+          ctx.strokeStyle = 'rgba(' + AC + ',' + g * 0.45 + ')';
           ctx.lineWidth = 1; ctx.stroke();
         }
         ctx.font = '500 9.5px "Geist Mono", monospace';
