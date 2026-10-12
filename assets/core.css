@@ -25,6 +25,7 @@
   --field-rgb:22,224,192;
   --cy:#16e0c0;   --cy-2:#5cf0d8;  --cy-dim:#0b5f52;  --cy-rgb:22,224,192;
   --cr:#ff5136;   --cr-2:#ff8069;  --cr-dim:#6e1d12;  --cr-rgb:255,81,54;
+  --gs:#fe762b;   --gs-2:#ff9b62;  --gs-dim:#6b2c0b;  --gs-rgb:254,118,43;
 
   --ac:var(--cy); --ac-2:var(--cy-2); --ac-dim:var(--cy-dim); --ac-rgb:var(--cy-rgb);
 
@@ -52,6 +53,7 @@
 }
 
 [data-ac="crimson"]{--ac:var(--cr);--ac-2:var(--cr-2);--ac-dim:var(--cr-dim);--ac-rgb:var(--cr-rgb)}
+[data-ac="guildstew"]{--ac:var(--gs);--ac-2:var(--gs-2);--ac-dim:var(--gs-dim);--ac-rgb:var(--gs-rgb)}
 
 /* ═══ RESET ═══ */
 *,*::before,*::after{box-sizing:border-box}

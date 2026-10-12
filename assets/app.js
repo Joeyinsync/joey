@@ -681,11 +681,21 @@
     x.addEventListener('click', close);
     lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
     addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
-    $$('.sc-slide img').forEach(function (im) {
-      im.addEventListener('click', function () {
-        var f = im.parentElement.querySelector('figcaption');
-        open(im.src, im.alt, f ? f.textContent : '');
-      });
+    $$('.sc-slide img, img[data-zoom]').forEach(function (im) {
+      function show() {
+        var fig = im.closest('figure'), f = fig && fig.querySelector('figcaption');
+        var c = f ? (f.querySelector('span') || f).textContent : im.alt;
+        open(im.currentSrc || im.src, im.alt, c);
+      }
+      im.addEventListener('click', show);
+      if (im.hasAttribute('data-zoom')) {
+        im.setAttribute('tabindex', '0');
+        im.setAttribute('role', 'button');
+        im.setAttribute('aria-label', 'Enlarge: ' + im.alt);
+        im.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(); }
+        });
+      }
     });
   })();
 
