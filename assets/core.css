@@ -404,8 +404,12 @@ html body .mikey .k{background:linear-gradient(90deg,var(--cr),var(--cy));-webki
 html body .mikey .av{border-color:rgba(var(--cr-rgb),.5);box-shadow:0 0 0 1px rgba(var(--cy-rgb),.25)}
 
 /* end-of-page link in brand colours */
-.cnext.brand .cnext-bg img{filter:saturate(1.05) brightness(.62);opacity:.55}
-.cnext.brand:hover .cnext-bg img{filter:saturate(1.15) brightness(.75);opacity:.75}
+.cnext.brand .cnext-bg{left:auto;width:min(48%,820px);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 45%);mask-image:linear-gradient(to right,transparent,#000 45%)}
+.cnext.brand .cnext-bg img{object-position:50% 30%;filter:saturate(1.05) brightness(.7);opacity:.7}
+.cnext.brand:hover .cnext-bg img{filter:saturate(1.15) brightness(.82);opacity:.85}
+.cnext.brand .cnext-bg::after{background:linear-gradient(to top,var(--void),transparent 45%)}
+@media(max-width:700px){.cnext.brand .cnext-bg{width:100%}.cnext.brand .cnext-bg img{opacity:.4}}
 .cnext.brand h2{text-shadow:0 0 40px rgba(var(--pu-rgb),.35)}
 .cnext.brand .go{background:var(--grad);-webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent}

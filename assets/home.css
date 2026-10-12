@@ -293,9 +293,12 @@ h1.nm .ch{display:inline-block;will-change:transform,filter}
 
 /* ═══ SOCIALS · PROOF OF ACTIVITY ════════════════════════════ */
 .socials{position:relative;padding-block:var(--s7);border-top:1px solid var(--line);overflow-x:clip}
-.socials::before{content:"";position:absolute;inset:8% -10% auto 46%;height:70%;z-index:-1;
-  background:radial-gradient(ellipse at 50% 35%,rgba(var(--ac-rgb),.09),transparent 68%);
+.socials::before{content:"";position:absolute;inset:0 0 auto 34%;height:80%;z-index:-1;
+  background:radial-gradient(closest-side,rgba(var(--ac-rgb),.09),transparent);
   pointer-events:none}
+body:not([data-ac]) .socials::before{background:
+  radial-gradient(closest-side at 62% 45%,rgba(var(--bc-rgb),.08),transparent),
+  radial-gradient(closest-side at 38% 55%,rgba(var(--pu-rgb),.06),transparent)}
 .socials-head{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.45fr);
   align-items:end;gap:var(--s5);margin-bottom:var(--s5)}
 .socials-head .big{font-size:clamp(42px,7.2vw,112px)}
