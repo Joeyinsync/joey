@@ -327,3 +327,43 @@ body:not([data-ac]) .pre-bar i{background:var(--grad)}
 .pre-mk{display:block;width:58px;height:auto;margin-bottom:var(--s3);
   filter:drop-shadow(0 0 14px rgba(var(--pu-rgb),.35));animation:mk-glow 2.4s var(--e-soft) infinite alternate}
 @keyframes mk-glow{to{filter:drop-shadow(0 0 22px rgba(var(--bc-rgb),.5))}}
+
+/* ═══ BRAND · NEON LAYER ═════════════════════════════════════
+   Everything that carries the accent on an unbranded page gets
+   the violet → cyan treatment. Project-coloured blocks (anything
+   inside a [data-ac] element) are left alone.                  */
+body:not([data-ac]) :is(.voice-big em,.socials-head .ed,.big .ed,.disc.on h3,.voice-chips b,
+  .rec-row .yr,.ctl-count b,.mstep .n,.nav-stat b,.chap b,
+  [style*="color:var(--ac)"]):not([data-ac] *){
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent}
+body:not([data-ac]) :is(.voice-big em,.socials-head .ed,.big .ed,.ident-stmt .acc,.close-big em,.hero-lede em){
+  filter:drop-shadow(0 0 18px rgba(var(--pu-rgb),.28))}
+body:not([data-ac]) .disc.on h3{filter:drop-shadow(0 0 22px rgba(var(--bc-rgb),.30))}
+body:not([data-ac]) :is(.sec-hd .n,.tag b,.net-read .k,nav.menu a .n,.disc.on .n,.ref .k,.scope-c .k,.sample .k,.smore .code,.doc-body h2 .n){
+  text-shadow:0 0 12px rgba(var(--ac-rgb),.55)}
+body:not([data-ac]) .sec-hd .ln{background:linear-gradient(90deg,rgba(var(--pu-rgb),.55),rgba(var(--bc-rgb),.28) 38%,var(--line) 72%)}
+body:not([data-ac]) .nav-links a::after,
+body:not([data-ac]) :is(.mstep,.sig,.spec-c)::before{background:var(--grad);box-shadow:0 0 14px rgba(var(--pu-rgb),.55)}
+body:not([data-ac]) .btn:not(.pri)::before{background:var(--grad)}
+body:not([data-ac]) .btn:not(.pri):hover{border-color:transparent}
+body:not([data-ac]) .mstep:hover{background:
+  radial-gradient(ellipse 90% 70% at 0% 0%,rgba(var(--pu-rgb),.10),transparent 60%),
+  radial-gradient(ellipse 90% 70% at 100% 100%,rgba(var(--bc-rgb),.08),transparent 60%),var(--surface)}
+body:not([data-ac]) .disc-prev{border-color:rgba(var(--pu-rgb),.6);
+  box-shadow:0 0 0 1px rgba(var(--bc-rgb),.25),0 18px 60px -12px rgba(var(--pu-rgb),.55)}
+body:not([data-ac]) .disc-prev img{filter:grayscale(.15) contrast(1.08) saturate(1.1)}
+body:not([data-ac]) .social-icon{border:1px solid transparent;
+  background:linear-gradient(var(--void),var(--void)) padding-box,
+             linear-gradient(135deg,rgba(var(--pu-rgb),.75),rgba(var(--bc-rgb),.75)) border-box;
+  box-shadow:0 0 18px -6px rgba(var(--pu-rgb),.6)}
+body:not([data-ac]) .social-icon svg{filter:drop-shadow(0 0 6px rgba(var(--bc-rgb),.55))}
+body:not([data-ac]) .social-letter{color:var(--bc);text-shadow:0 0 10px rgba(var(--bc-rgb),.6)}
+body:not([data-ac]) .social-card:hover .social-icon{box-shadow:0 0 26px -2px rgba(var(--pu-rgb),.7)}
+body:not([data-ac]) .social-card::before{background:linear-gradient(135deg,rgba(var(--pu-rgb),.14),rgba(var(--bc-rgb),.06) 45%,transparent 70%)}
+body:not([data-ac]) .chip[aria-pressed="true"]{background:var(--grad);border-color:transparent}
+body:not([data-ac]) .ref{border-left:0;padding-left:calc(var(--s3) + 2px);
+  background:linear-gradient(var(--pu),var(--bc)) left top/2px 100% no-repeat}
+body:not([data-ac]) .net-shell{background:
+  radial-gradient(ellipse 50% 55% at 38% 50%,rgba(var(--pu-rgb),.07),transparent 70%),
+  radial-gradient(ellipse 50% 55% at 62% 50%,rgba(var(--bc-rgb),.06),transparent 70%),var(--void-2)}

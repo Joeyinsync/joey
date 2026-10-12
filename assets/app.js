@@ -492,7 +492,7 @@
         var mxp = (h.x + core.x) / 2 + Math.sin(t + i) * 10;
         var myp = (h.y + core.y) / 2 + Math.cos(t + i) * 10;
         ctx.quadraticCurveTo(mxp, myp, core.x, core.y);
-        ctx.strokeStyle = 'rgba(' + AC + ',' + (0.10 + g * 0.55) + ')';
+        ctx.strokeStyle = 'rgba(' + (i % 2 ? PU : AC) + ',' + (0.16 + g * 0.55) + ')';
         ctx.lineWidth = 1 + g * 1.3;
         ctx.stroke();
       });
@@ -514,7 +514,7 @@
         var g = hubs[m.hub].glow;
         ctx.beginPath();
         ctx.arc(m.x, m.y, m.r + g * 0.7, 0, 6.2832);
-        ctx.fillStyle = 'rgba(147,163,184,' + (0.46 + g * 0.5) + ')';
+        ctx.fillStyle = 'rgba(' + (m.hub % 2 ? PU : AC) + ',' + (0.42 + g * 0.5) + ')';
         ctx.fill();
       });
 
@@ -538,7 +538,7 @@
       hubs.forEach(function (h, i) {
         var g = h.glow;
         ctx.beginPath(); ctx.arc(h.x, h.y, 4.5 + g * 2.6, 0, 6.2832);
-        ctx.fillStyle = g > 0.05 ? 'rgb(' + AC + ')' : 'rgba(147,163,184,.72)';
+        ctx.fillStyle = g > 0.05 ? 'rgb(' + AC + ')' : 'rgba(' + (i % 2 ? PU : AC) + ',.78)';
         ctx.fill();
         if (g > 0.02) {
           ctx.beginPath(); ctx.arc(h.x, h.y, 15 + g * 12, 0, 6.2832);

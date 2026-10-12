@@ -361,8 +361,10 @@ body.ready .hero-pfp{opacity:1;transform:none}
 @media(max-height:620px) and (min-width:901px){.hero-pfp{width:clamp(160px,16vw,240px);top:calc(var(--nav-h) + 60px)}}
 
 .close-art{position:absolute;z-index:-1;right:0;bottom:0;width:min(52%,720px);pointer-events:none;
-  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 62%),linear-gradient(to top,transparent 0,#000 38%);
-  mask-image:linear-gradient(to right,transparent 0,#000 62%),linear-gradient(to top,transparent 0,#000 38%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 58%,#000 78%,transparent 100%),
+                     linear-gradient(to bottom,transparent 0,#000 26%,#000 62%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 58%,#000 78%,transparent 100%),
+             linear-gradient(to bottom,transparent 0,#000 26%,#000 62%,transparent 100%);
   -webkit-mask-composite:source-in;mask-composite:intersect}
 .close-art img{display:block;width:100%;height:auto;opacity:.34;filter:saturate(1.05)}
 @media(max-width:900px){.close-art{width:100%}
