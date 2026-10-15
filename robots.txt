@@ -1,0 +1,5 @@
+# joeyinsync.com: every page is public and may be indexed by search engines and AI assistants.
+User-agent: *
+Allow: /
+
+Sitemap: https://joeyinsync.com/sitemap.xml

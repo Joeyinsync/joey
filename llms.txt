@@ -1,0 +1,38 @@
+# Joey in Sync
+
+> Joey (Nikolaj Krištof Jochym) is a community architect and author. He launches, repairs and staffs online communities, mostly on Discord: onboarding, governance, staff teams, events, growth and outreach, and the writing that holds it together. Seven years founding, running and directing communities. Open for work.
+
+Every figure on this site comes from server message logs, member counts and dated announcement records. Case studies state what was measured and what was not.
+
+## What clients hire Joey for
+
+- Launch a community: server architecture and roles, launch plan and opening events, onboarding and first-contact flow, rules, moderation and security, initial staff structure.
+- Fix a dying community: community audit and diagnosis, retention and channel restructure, feedback and reactivation loops, events and engagement systems, growth and partnership plan.
+- Build a team that runs it: staff roles and departments, recruitment and application flows, training and operating standards, escalation and accountability, clean handoff and continuity.
+- Growth and outreach: community research and lead sourcing, partnership development, Discord partnership outreach, creator and community collaborations, outreach tracking.
+
+## Case studies
+
+- [Guildstew](https://joeyinsync.com/guildstew.html): a Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation. Client project, delivered October 2026.
+- [Project Aurora](https://joeyinsync.com/aurora.html): a cold launch driven from 9 messages on day one to 2,508 on day fourteen, and the onboarding, governance, canon and security systems built to hold it.
+- [Crimson Network](https://joeyinsync.com/crimson.html): an international multi-game community that peaked at ~1,400 members, and the staff structure built to outlive its founder.
+- [Site-202 "New World"](https://joeyinsync.com/site202.html): a six-day teaser campaign before a single feature shipped, 4,000+ messages on launch day, 100 members in a week, and a founder account compromise the community never felt.
+
+## More
+
+- [The Archive](https://joeyinsync.com/archive.html): full track record, capability scope, references and writing samples.
+- [Imprint](https://joeyinsync.com/imprint.html): who runs the site, licensing and credits.
+- [Privacy](https://joeyinsync.com/privacy.html)
+
+## Reference
+
+"Joey built the backbone of both my communities. On Aurora he took an empty server to thousands of messages a day and designed the onboarding, rules and events that kept it running. On Crimson he built and trained a staff team that ran itself after he moved on. He's who I'd trust with community structure." — Mikey, Owner & Founder, Crimson Network / Project Aurora
+
+## Contact
+
+- Book a call: https://calendly.com/joeyinsync
+- Email: joeyinsync@gmail.com
+- Discord: joeyinsync
+- LinkedIn: https://www.linkedin.com/in/joeyinsync/
+- Upwork: https://www.upwork.com/freelancers/~01029fa938c2eb5634
+- Fiverr: https://www.fiverr.com/joeyinsync/
