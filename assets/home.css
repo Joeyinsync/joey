@@ -383,3 +383,13 @@ body.ready .hero-pfp{opacity:1;transform:none}
 /* seven profile cards: the last one spans two columns so the grid stays closed */
 .social-grid .social-card:last-child:nth-child(7){grid-column:span 2}
 @media(max-width:560px){.social-grid .social-card:last-child:nth-child(7){grid-column:auto}}
+
+/* ═══ HERO · PHONES ══════════════════════════════════════════
+   On phones the hero content starts at a fixed offset beside the
+   portrait and the section grows if the screen is short, instead of
+   pushing the name up under the nav.                            */
+@media(max-width:900px){
+  .hero{height:auto;min-height:0}
+  .hero-in{justify-content:flex-start;padding-top:calc(var(--nav-h) + 118px)}
+  .hero-pfp{top:calc(var(--nav-h) + 96px)}
+}
