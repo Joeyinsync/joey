@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' https://www.googletagmanager.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; media-src 'self'; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Guildstew: Discord &amp; Kickstarter Community Setup — Joey</title>
@@ -25,9 +25,9 @@
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/core.css?v=20261015-rp">
-<link rel="stylesheet" href="assets/case.css?v=20261015-rp">
-<link rel="stylesheet" href="assets/archive.css?v=20261015-rp">
+<link rel="stylesheet" href="assets/core.css?v=20261020-ga">
+<link rel="stylesheet" href="assets/case.css?v=20261020-ga">
+<link rel="stylesheet" href="assets/archive.css?v=20261020-ga">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://joeyinsync.com/guildstew.html#case","headline":"Guildstew: Discord & Kickstarter Community Setup","name":"Guildstew","description":"Guildstew: a Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation.","url":"https://joeyinsync.com/guildstew.html","image":"https://joeyinsync.com/assets/img/og-guildstew.jpg","inLanguage":"en","author":{"@type":"Person","@id":"https://joeyinsync.com/#joey","name":"Joey","url":"https://joeyinsync.com/"},"publisher":{"@type":"Person","@id":"https://joeyinsync.com/#joey","name":"Joey","url":"https://joeyinsync.com/"},"about":"Guildstew","isPartOf":{"@type":"WebSite","@id":"https://joeyinsync.com/#website","url":"https://joeyinsync.com/","name":"Joey in Sync"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://joeyinsync.com/"},{"@type":"ListItem","position":2,"name":"Guildstew","item":"https://joeyinsync.com/guildstew.html"}]}]}</script>
 </head>
 <body data-ac="guildstew">
@@ -295,7 +295,7 @@
       <div><span class="k">Case</span>Guildstew — Discord community setup, delivered October 2026. Guildstew name, logos and artwork belong to Aetherian Studios; see <a href="imprint.html#credits" data-to="Imprint">credits</a>.</div>
       <div><span class="k">Doctrine</span>Analyze · Build · Sustain</div>
       <div><span class="k">Index</span><a href="index.html" data-to="Joey">Home</a><br><a href="aurora.html" data-to="Project Aurora">Aurora</a><br><a href="crimson.html" data-to="Crimson Network">Crimson</a><br><a href="site202.html" data-to="Site-202">Site-202</a><br><a href="archive.html" data-to="The Archive">Archive</a></div>
-      <div><span class="k">Notice</span><a href="privacy.html" data-to="Privacy">Privacy</a><br><a href="imprint.html" data-to="Imprint">Imprint</a></div>
+      <div><span class="k">Notice</span><a href="privacy.html" data-to="Privacy">Privacy</a><br><a href="imprint.html" data-to="Imprint">Imprint</a><br><button class="foot-btn" type="button" data-consent-open>Cookie settings</button></div>
     </div>
   </div>
 </footer>
@@ -309,6 +309,7 @@
 <script src="assets/lib/gsap.min.js"></script>
 <script src="assets/lib/ScrollTrigger.min.js"></script>
 <script src="assets/lib/lenis.min.js"></script>
-<script src="assets/app.js?v=20261015-rp" defer></script>
+<script src="assets/app.js?v=20261020-ga" defer></script>
+<script src="assets/consent.js?v=20261020-ga" defer></script>
 </body>
 </html>

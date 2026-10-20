@@ -40,7 +40,7 @@ external links except the Google Fonts endpoints, removed on purpose.
   `prefers-reduced-motion`.
 - **Fonts self-hosted** (Geist Variable, Geist Mono Variable, Instrument Serif — OFL,
   112 KB). No request leaves the origin.
-- **CSP** is `'self'` throughout with no third-party origin at all.
+- **CSP** is `'self'` throughout. The one exception is Google Analytics (googletagmanager.com, google-analytics.com), which `assets/consent.js` loads only after the visitor accepts the cookie banner.
 - Counter figures ship as real text in the HTML and are zeroed only when the tween
   starts, so a no-JS visitor sees 2,508 rather than 0.
 

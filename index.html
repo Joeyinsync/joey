@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' https://www.googletagmanager.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Joey in Sync — Discord Community Architect &amp; Author</title>
@@ -28,8 +28,8 @@
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/core.css?v=20261015-rp">
-<link rel="stylesheet" href="assets/home.css?v=20261015-rp">
+<link rel="stylesheet" href="assets/core.css?v=20261020-ga">
+<link rel="stylesheet" href="assets/home.css?v=20261020-ga">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://joeyinsync.com/#website","url":"https://joeyinsync.com/","name":"Joey in Sync","inLanguage":"en","publisher":{"@id":"https://joeyinsync.com/#joey"}},{"@type":"Person","@id":"https://joeyinsync.com/#joey","name":"Joey","alternateName":["Nikolaj Krištof Jochym","joeyinsync"],"url":"https://joeyinsync.com/","image":"https://joeyinsync.com/assets/img/brand-avatar.webp","jobTitle":"Community Architect & Author","description":"Joey — community architect and author. I take a new or dying online community and make it alive, then build the onboarding, governance, teams, events and outreach that keep it that way.","email":"mailto:joey@joeyinsync.com","sameAs":["https://www.linkedin.com/in/joeyinsync/","https://www.upwork.com/freelancers/~01029fa938c2eb5634","https://www.fiverr.com/joeyinsync/","https://www.instagram.com/joeyinsync/","https://www.tiktok.com/@joeyinsync","https://www.youtube.com/@joeyinsync","https://www.kickstarter.com/profile/461540702"],"knowsAbout":["Discord community management","Community launch","Onboarding systems","Community governance and moderation","Staff team building","Growth and outreach","Events and engagement","Roleplay communities","Kickstarter community setup","Writing and worldbuilding"]},{"@type":"ProfilePage","@id":"https://joeyinsync.com/#page","url":"https://joeyinsync.com/","name":"Joey in Sync — Discord Community Architect & Author","mainEntity":{"@id":"https://joeyinsync.com/#joey"},"isPartOf":{"@id":"https://joeyinsync.com/#website"}}]}</script>
 </head>
 <body>
@@ -385,7 +385,7 @@
         <a href="https://www.youtube.com/@joeyinsync" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">YT</a>
         <a href="https://www.linkedin.com/in/joeyinsync/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
       </div></div>
-      <div><span class="k">Notice</span><a href="privacy.html" data-to="Privacy">Privacy policy</a><br><a href="imprint.html" data-to="Imprint">Imprint</a></div>
+      <div><span class="k">Notice</span><a href="privacy.html" data-to="Privacy">Privacy policy</a><br><a href="imprint.html" data-to="Imprint">Imprint</a><br><button class="foot-btn" type="button" data-consent-open>Cookie settings</button></div>
     </div>
   </div>
 </footer>
@@ -394,6 +394,7 @@
 <script src="assets/lib/ScrollTrigger.min.js"></script>
 <script src="assets/lib/lenis.min.js"></script>
 <script src="assets/field.js" defer></script>
-<script src="assets/app.js?v=20261015-rp" defer></script>
+<script src="assets/app.js?v=20261020-ga" defer></script>
+<script src="assets/consent.js?v=20261020-ga" defer></script>
 </body>
 </html>

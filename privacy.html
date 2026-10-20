@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; script-src 'self' https://www.googletagmanager.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy policy — Joey</title>
@@ -16,9 +16,9 @@
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/core.css?v=20261015-rp">
-<link rel="stylesheet" href="assets/case.css?v=20261015-rp">
-<link rel="stylesheet" href="assets/archive.css?v=20261015-rp">
+<link rel="stylesheet" href="assets/core.css?v=20261020-ga">
+<link rel="stylesheet" href="assets/case.css?v=20261020-ga">
+<link rel="stylesheet" href="assets/archive.css?v=20261020-ga">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -59,17 +59,18 @@
 <header class="wrap ahero" style="padding-bottom:var(--s4)">
   <a class="cback" href="index.html" data-to="Joey">← Back to portfolio</a>
   <h1 style="font-size:clamp(42px,8.5vw,120px)">PRIVACY<br>POLICY</h1>
-  <p class="doc-meta" style="margin-top:var(--s3)">System documentation · Updated 7 September 2026</p>
+  <p class="doc-meta" style="margin-top:var(--s3)">System documentation · Updated 20 October 2026</p>
 </header>
 
 <div class="wrap doc">
   <nav class="doc-nav" aria-label="Sections">
     <div class="k">Contents</div>
     <a href="#visiting">01 · Visiting this portfolio</a>
-    <a href="#contact-you">02 · When you get in touch</a>
-    <a href="#refs">03 · Portfolio references</a>
-    <a href="#external">04 · External services</a>
-    <a href="#rights">05 · Your rights</a>
+    <a href="#analytics">02 · Analytics &amp; cookies</a>
+    <a href="#contact-you">03 · When you get in touch</a>
+    <a href="#refs">04 · Portfolio references</a>
+    <a href="#external">05 · External services</a>
+    <a href="#rights">06 · Your rights</a>
     <a href="imprint.html">↗ · Imprint &amp; licensing</a>
   </nav>
 
@@ -77,24 +78,29 @@
     <p>This notice covers the portfolio at joeyinsync.com. The controller of personal data processed through this site is <b>Nikolaj Krištof Jochym</b>, acting as a private individual and not as a business — see the <a href="imprint.html">imprint</a>. Email is the only contact channel. For a privacy request, write to <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>.</p>
 
     <h2 id="visiting"><span class="n">Section 01</span>Visiting this portfolio</h2>
-    <p>The portfolio has no account registration, contact forms, checkout, advertising trackers or visitor analytics added by Joey. Its own code does not set cookies or use browser storage to track you.</p>
+    <p>The portfolio has no account registration, contact forms, checkout or advertising trackers. Visitor analytics run only if you accept them (see section 02). Your choice itself is saved in your browser's local storage so the banner does not ask again; it is not sent anywhere.</p>
     <p>GitHub Pages hosts the website. GitHub logs visitor IP addresses for security. Requests to deliver pages and assets also involve technical information such as browser/request details. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> for its processing and retention practices.</p>
-    <p>Typefaces, stylesheets, scripts and animation libraries are all served from this website itself rather than from Google Fonts or any third-party CDN, so loading a page makes no request to another company on your behalf.</p>
+    <p>Typefaces, stylesheets, scripts and animation libraries are all served from this website itself rather than from Google Fonts or any third-party CDN. The only request to another company is Google Analytics, and only after you accept it.</p>
 
-    <h2 id="contact-you"><span class="n">Section 02</span>When you get in touch</h2>
-    <p>If you email Joey, the information you choose to send—such as your email address, name, message and attachments—is processed to read and respond to your enquiry. Gmail provides the email service. Please share only information relevant to your enquiry, and avoid sending passwords or sensitive personal information.</p>
+    <h2 id="analytics"><span class="n">Section 02</span>Analytics &amp; cookies</h2>
+    <p>If you click <b>Accept</b> in the cookie banner, the site loads <b>Google Analytics 4</b>, provided by Google Ireland Limited and Google LLC. It measures which pages are visited and how: pages viewed, time on page, referring site, approximate location (country and city), device, browser and operating system. Google Analytics 4 does not store visitors' IP addresses. Advertising features and ad personalisation are switched off, and the data is used only to understand how the portfolio is used.</p>
+    <p>Google Analytics sets the cookies <code>_ga</code> and <code>_ga_3QCQLSF911</code>, which distinguish visits and last up to two years unless you delete them. The legal basis is your consent under Article 6(1)(a) GDPR and the consent required for cookies under Slovak electronic communications law. If you click <b>Decline</b> or make no choice, Google Analytics is not loaded and no analytics cookie is set.</p>
+    <p>You can change your choice at any time with <b>Cookie settings</b> in the footer of every page; declining removes the analytics cookies. Analytics data is kept for the retention period set in Google Analytics and then deleted by Google. Google may process it outside the European Economic Area under the EU-US Data Privacy Framework; see <a href="https://policies.google.com/privacy">Google's privacy policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites that use its services</a>.</p>
+
+    <h2 id="contact-you"><span class="n">Section 03</span>When you get in touch</h2>
+    <p>If you email Joey, the information you choose to send—such as your email address, name, message and attachments—is processed to read and respond to your enquiry. Mail sent to joey@joeyinsync.com is forwarded by Namecheap, the domain registrar, to a Gmail inbox, and Gmail provides the email service. Please share only information relevant to your enquiry, and avoid sending passwords or sensitive personal information.</p>
     <p>Responding to general enquiries relies on the legitimate interest in communicating with people who contact Joey. Where an enquiry concerns entering a contract with you, necessary processing may instead be based on taking steps at your request before a contract. Information needed to comply with a legal obligation is processed on that basis.</p>
     <p>Enquiry information is needed for handling the enquiry and any resulting relationship. Any further retention depends on outstanding follow-up, applicable legal recordkeeping duties or the need to establish or defend legal claims. You can ask about the information held about your enquiry and request deletion where applicable.</p>
 
-    <h2 id="refs"><span class="n">Section 03</span>Portfolio references</h2>
+    <h2 id="refs"><span class="n">Section 04</span>Portfolio references</h2>
     <p>Client-provided testimonials, display names and profile pictures are published on the basis of consent under Article 6(1)(a) GDPR. A record of each consent is kept so that it can be demonstrated under Article 7(1). Consent can be withdrawn at any time, with no effect on processing carried out before withdrawal: write to the contact email above and the testimonial is removed.</p>
 
-    <h2 id="external"><span class="n">Section 04</span>External services</h2>
+    <h2 id="external"><span class="n">Section 05</span>External services</h2>
     <p>LinkedIn, Fiverr, Upwork, Calendly and other external destinations are links, not embedded widgets. Following a link takes you to a separate service whose privacy terms apply. Messages sent through those services are handled within their respective platforms. This notice does not cover another firm's invoicing or contracting activities.</p>
     <p>Hosting and communication providers may process information outside the European Economic Area. Their privacy notices explain the locations and safeguards they use, including applicable transfer mechanisms. Contact Joey for questions about providers involved in your enquiry.</p>
 
-    <h2 id="rights"><span class="n">Section 05</span>Your rights</h2>
-    <p>Depending on the circumstances, you may request access, correction, deletion, restriction or portability of your personal data, and object to processing based on legitimate interests. Where processing relies on consent, you can withdraw it without affecting earlier lawful processing. You may also complain to the <a href="https://dataprotection.gov.sk/">Office for Personal Data Protection of the Slovak Republic</a> or your local data protection authority.</p>
+    <h2 id="rights"><span class="n">Section 06</span>Your rights</h2>
+    <p>Depending on the circumstances, you may request access, correction, deletion, restriction or portability of your personal data, and object to processing based on legitimate interests. Where processing relies on consent, you can withdraw it without affecting earlier lawful processing; for analytics, use <b>Cookie settings</b> in the footer. You may also complain to the <a href="https://dataprotection.gov.sk/">Office for Personal Data Protection of the Slovak Republic</a> or your local data protection authority.</p>
     <p>Contact <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a> to make a request. No automated decisions with legal or similarly significant effects are made by this portfolio.</p>
   </div>
 </div>
@@ -104,10 +110,10 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><span class="k">Document</span>Privacy policy — updated 7 September 2026.</div>
+      <div><span class="k">Document</span>Privacy policy — updated 20 October 2026.</div>
       <div><span class="k">Doctrine</span>Analyze · Build · Sustain</div>
       <div><span class="k">Index</span><a href="index.html" data-to="Joey">Home</a><br><a href="guildstew.html" data-to="Guildstew">Guildstew</a><br><a href="aurora.html" data-to="Project Aurora">Aurora</a><br><a href="crimson.html" data-to="Crimson Network">Crimson</a><br><a href="site202.html" data-to="Site-202">Site-202</a><br><a href="archive.html" data-to="The Archive">Archive</a></div>
-      <div><span class="k">Contact</span><a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a></div>
+      <div><span class="k">Contact</span><a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a><br><button class="foot-btn" type="button" data-consent-open>Cookie settings</button></div>
     </div>
   </div>
 </footer>
@@ -115,6 +121,7 @@
 <script src="assets/lib/gsap.min.js"></script>
 <script src="assets/lib/ScrollTrigger.min.js"></script>
 <script src="assets/lib/lenis.min.js"></script>
-<script src="assets/app.js?v=20261015-rp" defer></script>
+<script src="assets/app.js?v=20261020-ga" defer></script>
+<script src="assets/consent.js?v=20261020-ga" defer></script>
 </body>
 </html>

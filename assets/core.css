@@ -432,3 +432,24 @@ html body .mikey .av{border-color:rgba(var(--cr-rgb),.5);box-shadow:0 0 0 1px rg
 .cnext.brand h2{text-shadow:0 0 40px rgba(var(--pu-rgb),.35)}
 .cnext.brand .go{background:var(--grad);-webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent}
+
+/* ═══ COOKIE CONSENT ═════════════════════════════════════════ */
+.consent{position:fixed;z-index:8500;left:var(--gut);bottom:calc(20px + env(safe-area-inset-bottom,0px));
+  width:min(420px,calc(100vw - 2 * var(--gut)));padding:18px 18px 16px;display:grid;gap:14px;
+  background:rgba(11,15,23,.94);backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid transparent;
+  background:linear-gradient(rgba(11,15,23,.96),rgba(11,15,23,.96)) padding-box,
+             linear-gradient(120deg,rgba(var(--pu-rgb),.7),rgba(var(--bc-rgb),.6)) border-box;
+  box-shadow:0 24px 60px -24px rgba(var(--pu-rgb),.55)}
+.consent[hidden]{display:none}
+.consent p{font-size:13.5px;line-height:1.6;color:var(--text-2);margin:0}
+.consent p a{color:var(--text);border-bottom:1px solid var(--line-2)}
+.consent p a:hover{border-color:var(--ac)}
+.consent-row{display:flex;gap:8px}
+.consent-row button{flex:1;cursor:pointer;padding:11px 14px;min-height:44px;
+  font:500 11px/1 var(--f-m);letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line-2);color:var(--text);background:transparent}
+.consent-row .consent-yes{background:var(--grad);border-color:transparent;color:var(--void);font-weight:600}
+.consent-row button:hover{border-color:var(--text)}
+.consent-row button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.foot-btn{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.foot-btn:hover{color:var(--ac)}
