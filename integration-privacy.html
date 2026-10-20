@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TikTok integration privacy policy — Joey</title>
-<meta name="description" content="Privacy Policy for Joey's private, read-only TikTok integration connected through Composio.">
+<meta name="description" content="Privacy Policy for Joey in Sync, Joey's private TikTok integration connected through Composio.">
 <link rel="canonical" href="https://joeyinsync.com/integration-privacy.html">
 <meta property="og:url" content="https://joeyinsync.com/integration-privacy.html">
 <meta name="theme-color" content="#04060a">
@@ -68,47 +68,52 @@
     <div class="k">Contents</div>
     <a href="#scope">01 · What this covers</a>
     <a href="#data">02 · Data accessed</a>
-    <a href="#purpose">03 · How it is used</a>
-    <a href="#sharing">04 · Services involved</a>
-    <a href="#retention">05 · Storage &amp; retention</a>
-    <a href="#deletion">06 · Revoking &amp; deleting</a>
-    <a href="#rights">07 · Rights &amp; contact</a>
+    <a href="#content">03 · Content you upload</a>
+    <a href="#purpose">04 · How it is used</a>
+    <a href="#sharing">05 · Services involved</a>
+    <a href="#retention">06 · Storage &amp; retention</a>
+    <a href="#deletion">07 · Revoking &amp; deleting</a>
+    <a href="#rights">08 · Rights &amp; contact</a>
     <a href="integration-terms.html">↗ · Integration terms</a>
   </nav>
   <div class="doc-body">
-    <p>This policy explains how the private TikTok integration operated by <b>Nikolaj Krištof Jochym</b> (“Joey”), a private individual, handles data. Joey is the controller. Contact: <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>. The policy for the joeyinsync.com website itself is the separate <a href="privacy.html">website privacy policy</a>.</p>
+    <p>This policy explains how the private TikTok integration “Joey in Sync”, operated by <b>Nikolaj Krištof Jochym</b> (“Joey”), a private individual, handles data. Joey is the controller. Contact: <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>. The policy for the joeyinsync.com website itself is the separate <a href="privacy.html">website privacy policy</a>.</p>
 
     <h2 id="scope"><span class="n">Section 01</span>What this covers</h2>
-    <p>The integration is a TikTok developer application used only by Joey to read data from his own TikTok account. It is not available to anyone else, and it does not collect data about other TikTok users beyond what TikTok includes in the authorised account's own data.</p>
+    <p>The integration is a TikTok developer application used only by Joey with his own TikTok account. It is not available to anyone else, and it does not collect data about other TikTok users beyond what TikTok includes in the authorised account's own data.</p>
 
     <h2 id="data"><span class="n">Section 02</span>Data accessed</h2>
-    <p>With the scopes <code>user.info.basic</code>, <code>user.info.profile</code>, <code>user.info.stats</code> and <code>video.list</code>, the integration can read:</p>
+    <p>With the scopes <code>user.info.basic</code>, <code>user.info.profile</code>, <code>user.info.stats</code>, <code>video.list</code>, <code>video.upload</code> and <code>video.publish</code>, the integration can read:</p>
     <ul>
       <li><b>Basic profile information</b>: display name, avatar and the account's TikTok identifiers.</li>
       <li><b>Profile details</b>: bio, profile links and verification status.</li>
       <li><b>Account statistics</b>: follower, following, like and video counts.</li>
       <li><b>The account's public video list</b>: video titles and descriptions, cover images, links, publish dates, and view, like, comment and share counts.</li>
+      <li><b>Posting information</b>: the posting options TikTok returns for the account, such as available privacy levels, and the status of uploads and posts the integration makes.</li>
     </ul>
-    <p>It does not access private messages, drafts, payment information, contacts or the content of other users' accounts, and it cannot post or change anything.</p>
+    <p>It does not access private messages, payment information, contacts or the content of other users' accounts.</p>
 
-    <h2 id="purpose"><span class="n">Section 03</span>How it is used</h2>
-    <p>The data is used only for Joey's personal analysis of his own TikTok account: reviewing statistics, comparing video performance and planning content. It is not sold, shared for advertising, or used to make automated decisions about anyone.</p>
+    <h2 id="content"><span class="n">Section 03</span>Content you upload</h2>
+    <p>When Joey asks the integration to upload or post a video, the video file and its details, such as the caption, privacy setting and interaction settings, are sent to TikTok through Composio. Content is uploaded as a draft or posted directly only on Joey's request, and only to his own account.</p>
 
-    <h2 id="sharing"><span class="n">Section 04</span>Services involved</h2>
+    <h2 id="purpose"><span class="n">Section 04</span>How it is used</h2>
+    <p>The data is used only for managing Joey's own TikTok account: reviewing statistics, comparing video performance, planning content and publishing it. It is not sold, shared for advertising, or used to make automated decisions about anyone.</p>
+
+    <h2 id="sharing"><span class="n">Section 05</span>Services involved</h2>
     <ul>
-      <li><b>TikTok</b> provides the data through its developer API under the <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok Privacy Policy</a>.</li>
-      <li><b>Composio</b> manages the connection: it stores the OAuth access tokens and makes the API requests on Joey's behalf. See the <a href="https://composio.dev/privacy">Composio privacy policy</a>.</li>
-      <li><b>Claude by Anthropic</b>, the AI assistant Joey uses, receives the data that Joey asks it to analyse. See the <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a>.</li>
+      <li><b>TikTok</b> provides the data and receives uploaded content through its developer APIs under the <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok Privacy Policy</a>.</li>
+      <li><b>Composio</b> manages the connection: it stores the OAuth access tokens and makes the API requests, including uploads, on Joey's behalf. See the <a href="https://composio.dev/privacy">Composio privacy policy</a>.</li>
+      <li><b>Claude by Anthropic</b>, the AI assistant Joey uses, receives the data that Joey asks it to analyse and the content he asks it to prepare or publish. See the <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a>.</li>
     </ul>
     <p>No other parties receive data from the integration. These providers may process information outside the European Economic Area under the transfer safeguards described in their own policies.</p>
 
-    <h2 id="retention"><span class="n">Section 05</span>Storage &amp; retention</h2>
-    <p>Data is fetched on request when Joey wants to review his account; the integration does not run its own database. Composio keeps the OAuth tokens for as long as the account stays connected. Copies of results that appear in Joey's AI conversations are kept according to his settings with that service and can be deleted there.</p>
+    <h2 id="retention"><span class="n">Section 06</span>Storage &amp; retention</h2>
+    <p>Data is fetched on request; the integration does not run its own database. Composio keeps the OAuth tokens for as long as the account stays connected, and handles video files only for as long as an upload requires. Published content stays on TikTok until it is deleted there. Copies of results that appear in Joey's AI conversations are kept according to his settings with that service and can be deleted there.</p>
 
-    <h2 id="deletion"><span class="n">Section 06</span>Revoking &amp; deleting</h2>
-    <p>Access can be revoked at any time in the TikTok app under <b>Settings and privacy → Security and permissions → Apps and services permissions</b>, or by disconnecting the account in Composio, which removes the stored tokens. After that, the integration cannot read any further data. Requests to delete data can be sent to <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>.</p>
+    <h2 id="deletion"><span class="n">Section 07</span>Revoking &amp; deleting</h2>
+    <p>Access can be revoked at any time in the TikTok app under <b>Settings and privacy → Security and permissions → Apps and services permissions</b>, or by disconnecting the account in Composio, which removes the stored tokens. After that, the integration cannot read data or upload and post anything. Videos already published can be deleted in the TikTok app. Requests to delete data can be sent to <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>.</p>
 
-    <h2 id="rights"><span class="n">Section 07</span>Rights &amp; contact</h2>
+    <h2 id="rights"><span class="n">Section 08</span>Rights &amp; contact</h2>
     <p>Under the GDPR you may request access, correction, deletion, restriction or portability of personal data, object to processing, and complain to the <a href="https://dataprotection.gov.sk/">Office for Personal Data Protection of the Slovak Republic</a>. This policy may be updated if the integration changes; the date at the top shows the latest version. Contact: <a href="mailto:joey@joeyinsync.com">joey@joeyinsync.com</a>.</p>
   </div>
 </div>
