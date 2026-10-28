@@ -432,3 +432,13 @@ html body .mikey .av{border-color:rgba(var(--cr-rgb),.5);box-shadow:0 0 0 1px rg
 .cnext.brand h2{text-shadow:0 0 40px rgba(var(--pu-rgb),.35)}
 .cnext.brand .go{background:var(--grad);-webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent}
+
+/* ═══ CLIENT ENDORSEMENT ═════════════════════════════════════ */
+.lref.endorse{margin-top:var(--s4)}
+.lref .proof{display:block;width:100%;max-width:688px;height:auto;margin-top:var(--s3);border:1px solid var(--line-2)}
+.portal .pq{display:block;max-width:62ch;font:400 clamp(15px,1.4vw,18px)/1.4 var(--f-e);font-style:italic;color:var(--text)}
+.portal .pq b{display:block;margin-top:6px;font:500 10px/1.4 var(--f-m);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+.ref.wide{grid-column:1/-1}
+.ref.wide .q{max-width:40ch}
+.ref .sc a{color:var(--ac);border-bottom:1px solid currentColor}
+body:not([data-ac]) .ref.gs{background:none;border-left:2px solid var(--gs);padding-left:var(--s3)}
