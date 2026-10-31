@@ -442,3 +442,6 @@ html body .mikey .av{border-color:rgba(var(--cr-rgb),.5);box-shadow:0 0 0 1px rg
 .ref.wide .q{max-width:40ch}
 .ref .sc a{color:var(--ac);border-bottom:1px solid currentColor}
 body:not([data-ac]) .ref.gs{background:none;border-left:2px solid var(--gs);padding-left:var(--s3)}
+.ref .q2{margin-top:14px;font:italic 400 clamp(16px,1.6vw,19px)/1.4 var(--f-e);color:var(--text-2);max-width:56ch}
+.mention-t b{display:block;margin-top:4px;font:500 10px/1.5 var(--f-m);letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
+.mention-t{font-family:var(--f-e);font-size:clamp(17px,1.6vw,20px);line-height:1.4;color:var(--text)}
