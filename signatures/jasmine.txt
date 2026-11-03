@@ -1,0 +1,20 @@
+Jasmine - email signature for jasmine@joeyinsync.com
+Updated 2026-11-03
+
+New emails: append FULL (HTML) after the message body.
+Replies: append SHORT (HTML) instead.
+Send the email as HTML. If only plain text is possible, use the PLAIN TEXT versions.
+
+=== FULL (HTML) ===
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" bgcolor="#04060a" style="border-collapse:separate;background-color:#04060a;border:1px solid #1a2331;border-radius:12px;font-family:Arial,Helvetica,sans-serif;"><tr><td style="padding:16px 16px 16px 18px;vertical-align:middle;"><a href="https://joeyinsync.com/" style="text-decoration:none;"><img src="https://joeyinsync.com/assets/img/signature-jasmine.png" width="72" height="72" alt="Jasmine" style="display:block;width:72px;height:72px;border:0;border-radius:50%;"></a></td><td style="padding:16px 22px 16px 0;vertical-align:middle;"><table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;"><tr><td style="padding:0 0 0 16px;border-left:2px solid #b44dff;"><div style="font-size:18px;line-height:22px;font-weight:bold;color:#eef2f8;">Jasmine</div><div style="font-size:10.5px;line-height:18px;font-weight:bold;letter-spacing:1.6px;color:#22c8ff;">OUTREACH ASSISTANT</div><div style="font-size:13px;line-height:20px;padding-top:5px;color:#93a3b8;">On behalf of <span style="color:#eef2f8;font-weight:bold;">Joey</span>, Community Architect &amp; Author</div><div style="font-size:13px;line-height:20px;padding-top:7px;color:#93a3b8;"><a href="https://joeyinsync.com/" style="color:#eef2f8;text-decoration:none;white-space:nowrap;">Website</a><span style="color:#b44dff;">&nbsp;&nbsp;&middot;&nbsp;</span> <a href="https://www.linkedin.com/in/joeyinsync/" style="color:#eef2f8;text-decoration:none;white-space:nowrap;">Joey on LinkedIn</a><span style="color:#b44dff;">&nbsp;&nbsp;&middot;&nbsp;</span> <a href="https://calendly.com/joeyinsync" style="color:#22c8ff;text-decoration:none;font-weight:bold;letter-spacing:0.4px;white-space:nowrap;">Book a call with Joey &rarr;</a></div></td></tr></table></td></tr></table>
+
+=== SHORT (HTML) ===
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;"><tr><td style="padding:0 0 0 10px;border-left:2px solid #b44dff;font-size:13px;line-height:20px;color:#5b6b80;"><b style="color:#111722;">Jasmine</b>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Outreach Assistant&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://calendly.com/joeyinsync" style="color:#7c3aed;text-decoration:none;font-weight:bold;white-space:nowrap;">Book a call with Joey &rarr;</a></td></tr></table>
+
+=== FULL (PLAIN TEXT) ===
+Jasmine · Outreach Assistant
+On behalf of Joey, Community Architect & Author
+Website: https://joeyinsync.com · Joey on LinkedIn: https://www.linkedin.com/in/joeyinsync/ · Book a call with Joey: https://calendly.com/joeyinsync
+
+=== SHORT (PLAIN TEXT) ===
+Jasmine · Outreach Assistant · Book a call with Joey: https://calendly.com/joeyinsync
