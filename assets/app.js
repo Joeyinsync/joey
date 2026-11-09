@@ -602,12 +602,14 @@
       onComplete: function () { gsap.set(veil, { visibility: 'hidden', opacity: 0 }); }
     });
 
-    var samePage = location.pathname.split('/').pop();
+    /* "/guildstew", "/guildstew.html", "/" and "/index.html" are the same page either way */
+    function pageOf(path) { return path.replace(/\.html$/, '').replace(/\/index$/, '/'); }
+    var samePage = pageOf(location.pathname);
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute('href');
       if (!href || href.charAt(0) === '#' || a.target === '_blank') return;
       if (/^(mailto:|tel:|https?:)/i.test(href)) return;
-      if (href.split('#')[0] === samePage) return;
+      if (pageOf(new URL(href, location.href).pathname) === samePage) return;
 
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;

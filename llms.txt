@@ -13,16 +13,16 @@ Every figure on this site comes from server message logs, member counts and date
 
 ## Case studies
 
-- [Guildstew](https://joeyinsync.com/guildstew.html): a Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation. Client project, delivered October 2026.
-- [Project Aurora](https://joeyinsync.com/aurora.html): a cold launch driven from 9 messages on day one to 2,508 on day fourteen, and the onboarding, governance, canon and security systems built to hold it.
-- [Crimson Network](https://joeyinsync.com/crimson.html): an international multi-game community that peaked at ~1,400 members, and the staff structure built to outlive its founder.
-- [Site-202 "New World"](https://joeyinsync.com/site202.html): a six-day teaser campaign before a single feature shipped, 4,000+ messages on launch day, 100 members in a week, and a founder account compromise the community never felt.
+- [Guildstew](https://joeyinsync.com/guildstew): a Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation. Client project, delivered October 2026.
+- [Project Aurora](https://joeyinsync.com/aurora): a cold launch driven from 9 messages on day one to 2,508 on day fourteen, and the onboarding, governance, canon and security systems built to hold it.
+- [Crimson Network](https://joeyinsync.com/crimson): an international multi-game community that peaked at ~1,400 members, and the staff structure built to outlive its founder.
+- [Site-202 "New World"](https://joeyinsync.com/site202): a six-day teaser campaign before a single feature shipped, 4,000+ messages on launch day, 100 members in a week, and a founder account compromise the community never felt.
 
 ## More
 
-- [The Archive](https://joeyinsync.com/archive.html): full track record, capability scope, references and writing samples.
-- [Imprint](https://joeyinsync.com/imprint.html): who runs the site, licensing and credits.
-- [Privacy](https://joeyinsync.com/privacy.html)
+- [The Archive](https://joeyinsync.com/archive): full track record, capability scope, references and writing samples.
+- [Imprint](https://joeyinsync.com/imprint): who runs the site, licensing and credits.
+- [Privacy](https://joeyinsync.com/privacy)
 
 ## References
 
