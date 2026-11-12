@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://joeyinsync.com/</loc><lastmod>2026-11-09</lastmod><priority>1.0</priority></url>
-  <url><loc>https://joeyinsync.com/guildstew</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://joeyinsync.com/aurora</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://joeyinsync.com/crimson</loc><lastmod>2026-11-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://joeyinsync.com/site202</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://joeyinsync.com/archive</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://joeyinsync.com/imprint</loc><lastmod>2026-11-09</lastmod><priority>0.2</priority></url>
-  <url><loc>https://joeyinsync.com/privacy</loc><lastmod>2026-11-09</lastmod><priority>0.2</priority></url>
-  <url><loc>https://joeyinsync.com/integration-terms</loc><lastmod>2026-11-09</lastmod><priority>0.1</priority></url>
-  <url><loc>https://joeyinsync.com/integration-privacy</loc><lastmod>2026-11-09</lastmod><priority>0.1</priority></url>
+  <url><loc>https://joeyinsync.com/</loc><lastmod>2026-11-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://joeyinsync.com/for/game-studios</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://joeyinsync.com/for/kickstarter</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://joeyinsync.com/for/agencies</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://joeyinsync.com/guildstew</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://joeyinsync.com/aurora</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://joeyinsync.com/crimson</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://joeyinsync.com/site202</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://joeyinsync.com/archive</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://joeyinsync.com/imprint</loc><lastmod>2026-11-12</lastmod><priority>0.2</priority></url>
+  <url><loc>https://joeyinsync.com/privacy</loc><lastmod>2026-11-12</lastmod><priority>0.2</priority></url>
+  <url><loc>https://joeyinsync.com/integration-terms</loc><lastmod>2026-11-12</lastmod><priority>0.1</priority></url>
+  <url><loc>https://joeyinsync.com/integration-privacy</loc><lastmod>2026-11-12</lastmod><priority>0.1</priority></url>
 </urlset>

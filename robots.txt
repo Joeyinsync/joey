@@ -2,5 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /signatures/
+Disallow: /tools/
 
 Sitemap: https://joeyinsync.com/sitemap.xml
