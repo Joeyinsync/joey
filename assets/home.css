@@ -238,8 +238,8 @@
 
 /* ═══ 07 · VOICE ═════════════════════════════════════════════ */
 .voice{display:grid;grid-template-columns:1.08fr .92fr;gap:var(--s6);align-items:center}
-.voice-big{font-family:var(--f-d);font-weight:600;letter-spacing:-.05em;line-height:.94;
-  font-size:clamp(40px,7.2vw,110px)}
+.voice-big{font-family:var(--f-d);font-weight:600;letter-spacing:-.045em;line-height:1;
+  font-size:clamp(36px,4.6vw,72px);max-width:13ch;text-wrap:balance}
 .voice-big em{font-family:var(--f-e);font-style:italic;font-weight:400;color:var(--ac);letter-spacing:-.02em}
 .voice p{color:var(--text-2);margin-top:var(--s3);max-width:52ch;font-size:16px}
 .voice p b{color:var(--text);font-weight:600}

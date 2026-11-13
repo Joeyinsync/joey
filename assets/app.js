@@ -952,7 +952,7 @@
 
     var SUGGEST = [
       { t: 'For game studios', u: '/for/game-studios', p: 'Path', x: 'Onboarding, feedback routes and a staff team for your game’s Discord.' },
-      { t: 'For Kickstarter creators', u: '/for/kickstarter', p: 'Path', x: 'Backer verification, support tickets and a home for backers.' },
+      { t: 'For Kickstarter creators', u: '/for/kickstarter', p: 'Path', x: 'Code-based backer access, support tickets and a home for backers.' },
       { t: 'For agencies', u: '/for/agencies', p: 'Path', x: 'Scoped, approved, built and handed over to your team.' },
       { t: 'Guildstew — paid client project', u: '/guildstew', p: 'Case D', x: 'A Discord built for a Kickstarter community.' },
       { t: 'Project Aurora — 9 → 2,508 messages/day', u: '/aurora', p: 'Case A', x: 'Cold launch to a living 18+ world.' },
