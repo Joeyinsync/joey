@@ -92,7 +92,6 @@
 .pg-fill{fill:url(#plotGrad);opacity:0;transition:opacity 900ms 700ms ease}
 .plot.drawn .pg-fill{opacity:1}
 .pg-line{fill:none;stroke:var(--ac);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;
-  vector-effect:non-scaling-stroke;
   stroke-dasharray:var(--len,1400);stroke-dashoffset:var(--len,1400);
   transition:stroke-dashoffset 2s var(--e-out)}
 .plot.drawn .pg-line{stroke-dashoffset:0}
@@ -115,12 +114,12 @@
 
 /* ═══ TIMELINE ═══════════════════════════════════════════════ */
 .tline{position:relative;margin-block:var(--s5);border-top:1px solid var(--line)}
-.tl-row{display:grid;grid-template-columns:64px 1fr;gap:var(--s3);align-items:start;
+.tl-row{display:grid;grid-template-columns:84px minmax(0,1fr);gap:var(--s3);align-items:start;padding-left:18px;
   padding-block:var(--s3);border-bottom:1px solid var(--line);position:relative;cursor:pointer}
 .tl-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--ac);
   transform:scaleY(0);transform-origin:top;transition:transform 500ms var(--e-out)}
 .tl-row.on::before{transform:scaleY(1)}
-.tl-row .n{font:500 11.5px/1.6 var(--f-m);letter-spacing:.1em;color:var(--text-3);transition:color var(--t-comp)}
+.tl-row .n{font:500 11.5px/1.6 var(--f-m);letter-spacing:.08em;color:var(--text-3);white-space:nowrap;padding-top:.45em;transition:color var(--t-comp)}
 .tl-row.on .n{color:var(--ac)}
 .tl-row h4{font-family:var(--f-d);font-weight:600;font-size:clamp(19px,2.4vw,27px);letter-spacing:-.03em;
   transition:transform 500ms var(--e-out),color var(--t-comp)}
@@ -128,7 +127,7 @@
 .tl-row p{color:var(--text-2);font-size:14.5px;max-height:0;opacity:0;overflow:hidden;
   transition:max-height 500ms var(--e-out),opacity 400ms,margin-top 500ms}
 .tl-row.on p{max-height:180px;opacity:1;margin-top:12px}
-@media(max-width:640px){.tl-row{grid-template-columns:44px 1fr}.tl-row.on h4{transform:none}}
+@media(max-width:640px){.tl-row{grid-template-columns:minmax(0,1fr);gap:6px;padding-left:16px}.tl-row .n{padding-top:0}.tl-row.on h4{transform:none}}
 
 /* ═══ SPEC GRID ══════════════════════════════════════════════ */
 .spec{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
@@ -227,7 +226,7 @@
 .own-stage svg{width:100%;height:auto;display:block;overflow:visible}
 .own-g{opacity:0;transition:opacity 700ms var(--e-out)}
 .own-g.on{opacity:1}
-.own-link{fill:none;stroke:var(--line-2);stroke-width:1.2;vector-effect:non-scaling-stroke;
+.own-link{fill:none;stroke:var(--line-2);stroke-width:1.2;
   stroke-dasharray:var(--l,300);stroke-dashoffset:var(--l,300);
   transition:stroke-dashoffset 900ms var(--e-out),stroke var(--t-comp)}
 .own-g.on .own-link{stroke-dashoffset:0}

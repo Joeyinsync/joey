@@ -200,6 +200,7 @@
   display:flex;justify-content:space-between;gap:12px;
   font:500 11.5px/1 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
 .portal-idx b{color:var(--ac);font-weight:500}
+.portal-idx>span:last-child{white-space:nowrap}
 .portal h3{font-family:var(--f-d);font-weight:600;letter-spacing:-.045em;line-height:.9;
   font-size:clamp(38px,6vw,86px)}
 .portal .sub{font-family:var(--f-e);font-size:clamp(17px,1.8vw,23px);color:var(--text-2);max-width:26ch}

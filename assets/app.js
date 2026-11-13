@@ -44,6 +44,14 @@
   if (location.hash) {
     requestAnimationFrame(function () { requestAnimationFrame(restoreHashTarget); });
     addEventListener('load', restoreHashTarget, { once: true });
+  } else {
+    /* a fresh visit (not Back/Forward or a reload) always opens at the top,
+       even inside frames or browsers that carry the previous scroll over */
+    var navEntry = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || {};
+    if (navEntry.type === 'navigate') {
+      scrollTo(0, 0);
+      if (lenis) lenis.scrollTo(0, { immediate: true });
+    }
   }
 
   /* ─────────────────────────────────────────────
