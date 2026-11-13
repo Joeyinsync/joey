@@ -21,10 +21,10 @@ How a project runs: a review of the community or plan, an agreed written scope, 
 
 ## Case studies
 
-- [Guildstew](https://joeyinsync.com/guildstew): paid client project. A Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation. Delivered October 2026.
+- [Guildstew](https://joeyinsync.com/guildstew): client project. A Discord built for a Kickstarter community. Onboarding, backer access, support, feedback and staff operations in one server, handed over with practical documentation. Delivered October 2026.
 - [Project Aurora](https://joeyinsync.com/aurora): a cold launch driven from 9 messages on day one to 2,508 on day fourteen, and the onboarding, governance, canon and security systems built to hold it. Joey started as Community Manager, Canon Director and consultant at once — he ran the community and the Discord's technical setup and wrote the entire lore — and was then promoted to Executive Director on the Aurora Board, leading the whole staff team. 2025–2026; the project is currently on hold.
 - [Crimson Network](https://joeyinsync.com/crimson): an international multi-game community that peaked at ~1,400 members, and the staff structure built to outlive its founder. Joey joined as Overseer while it was still Crimson Shield International, then planned and built Crimson Network with its owner, Mikey, and moved into Staff Manager.
-- [Site-202 "New World"](https://joeyinsync.com/site202): Joey's own community. A six-day teaser campaign before a single feature shipped, 4,000+ messages on launch day, 100 members in a week, and a founder account compromise the community never felt.
+- [Site-202 "New World"](https://joeyinsync.com/site202): Joey's own community. A six-day teaser campaign before a single feature shipped, 4,000+ messages on launch day, 100 members in a week, and a founder account compromise the community never felt. Since then: two-factor authentication with hardware security keys on every account, and server ownership always held by a separate account, never the main one.
 
 ## Writing
 
