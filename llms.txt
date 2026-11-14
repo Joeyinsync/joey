@@ -10,6 +10,8 @@ Every figure on this site comes from server message logs, member counts and date
 - [Kickstarter creators](https://joeyinsync.com/for/kickstarter): a home for backers — code-based backer access (the code from a backers-only update unlocks backer-only spaces; it does not check pledges), backer-only spaces, support tickets that keep purchase details out of public channels, feedback forums with status tags, and documentation for the team.
 - [Agencies](https://joeyinsync.com/for/agencies): the Discord side of a client launch — a written scope the client approves, a server built to it, and a documented handoff (staff playbook and a 14-day engagement plan) the agency's or client's team can run.
 
+- [GTA VI creators](https://joeyinsync.com/gta6): Discord community setup and support for Twitch, Kick and YouTube creators who plan to stream Grand Theft Auto VI — onboarding, community rituals, rules, staff roles and moderation routes, with an owner handoff; ongoing management only inside a written monthly scope. Joey in Sync is independent and not affiliated with Rockstar Games or Take-Two Interactive.
+
 ## What clients hire Joey for
 
 - Launch a community: server architecture and roles, launch plan and opening events, onboarding and first-contact flow, rules, moderation and security, initial staff structure.

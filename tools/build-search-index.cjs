@@ -11,6 +11,7 @@ const PAGES = [
   ['for/game-studios.html', '/for/game-studios', 'For game studios'],
   ['for/kickstarter.html', '/for/kickstarter', 'For Kickstarter creators'],
   ['for/agencies.html', '/for/agencies', 'For agencies'],
+  ['gta6.html', '/gta6', 'GTA VI creators'],
   ['guildstew.html', '/guildstew', 'Case D · Guildstew'],
   ['aurora.html', '/aurora', 'Case A · Aurora'],
   ['crimson.html', '/crimson', 'Case B · Crimson'],
